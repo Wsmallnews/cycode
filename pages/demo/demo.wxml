@@ -1,0 +1,122 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>
+</view>
+
+<view class="btn" style="margin-bottom: 30rpx">
+    <view class="zan-btn zan-btn--primary zan-btn--large">这是 demo</view>
+    <button class="zan-btn zan-btn--danger" bindtap="showAction">显示 actionsheet</button>
+    <view class="zan-btn zan-btn--warn zan-btn--small zan-btn--loading">取消订单</view>
+    <button class="zan-btn zan-btn--warn zan-btn--mini">确认付款</button>
+
+    <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default </button>
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> primary </button>
+    <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="warn"> warn </button>
+    <button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+    <button bindtap="setPlain">点击设置以上按钮plain属性</button>
+    <button bindtap="setLoading">点击设置以上按钮loading属性</button>
+    <button open-type="contact">进入客服会话</button>
+</view>
+
+
+<!-- actionsheet -->
+<import src="/zanui/actionsheet/index.wxml" />
+<template is="zan-actionsheet" data="{{ ...actionsheet }}"></template>
+
+
+<!-- 胶囊 -->
+<import src="/zanui/capsule/index.wxml" />
+<template is="capsule" data="{{ leftText: '1折', rightText: '限购一份'}}" />
+<template is="capsule" data="{{ leftText: '1折', rightText: '限购一份', type: 'danger' }}" />
+<template is="capsule" data="{{ leftText: '1折', rightText: '限购一份', color: '#38f' }}" />
+
+
+
+<!-- 卡片 -->
+<view class="zan-card" style="margin-bottom: 100rpx; margin-top: 100rpx">
+      <!-- 卡片左侧商品图片 -->
+    <view class="zan-card__thumb">
+        <image class="zan-card__img"
+            src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg"
+            mode="aspectFit"
+        ></image>
+    </view>
+      <!-- 卡片右侧详情描述 -->
+    <view class="zan-card__detail">
+        <!-- 商品标题行 -->
+        <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+        <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+        <view class="zan-card__detail-row">
+            <view class="zan-card__right-col">¥ 999.99</view>
+            <view class="zan-card__left-col zan-ellipsis--l2">
+                红烧牛肉【虚拟商品】【有库存】【有sku】
+            </view>
+        </view>
+        <!-- 商品附属信息展示行 -->
+        <view class="zan-card__detail-row zan-c-gray-darker">
+            <view class="zan-card__right-col">x2</view>
+            <view class="zan-card__left-col">
+                3000克 50%
+            </view>
+        </view>
+        <!-- 商品操作按钮相关 -->
+        <view class="zan-card__detail-row zan-c-gray-darker">
+            <view class="zan-card__left-col zan-c-red">已发货</view>
+        </view>
+    </view>
+</view>
+
+<!-- cell 列表 -->
+
+<view class="zan-cell zan-cell--access" style="margin-bottom: 100rpx; margin-top: 100rpx">
+    <view class="zan-cell__bd">单行列表</view>
+    <view class="zan-cell__ft"></view>
+</view>
+
+<!-- layout -->
+
+<view class="zan-cell zan-cell--access">
+    <view class="zan-cell__bd">layout 布局</view>
+</view>
+<view class="zan-row">
+    <view class="zan-col zan-col-8">
+        span: 8
+    </view>
+    <view class="zan-col zan-col-8">
+        span: 8
+    </view>
+    <view class="zan-col zan-col-8">
+        span: 8
+    </view>
+</view>
+<view class="zan-row">
+    <view class="zan-col zan-col-4">span: 4</view>
+    <view class="zan-col zan-col-10 zan-col-offset-4">offset: 4, span: 10</view>
+</view>
+<view class="zan-row">
+    <view class="zan-col zan-col-12 zan-col-offset-12">offset: 12, span: 12</view>
+</view>
+
+
+<!-- loadMore -->
+<button bindtap="switchLoadMore">切换loadMore</button>
+
+<import src="/zanui/loadmore/index.wxml" />
+<template is="zan-loadmore" data="{{ ...loadStaus }}"></template>
+
+
+<!-- noticeBar -->
+<import src="/zanui/noticebar/index.wxml" />
+<template is="zan-noticebar" data="{{ text: '展示文案', componentId: 'noticebar'  }}"></template>
