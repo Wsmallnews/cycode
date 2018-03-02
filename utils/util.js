@@ -48,6 +48,39 @@ const extend = (objFirst, objSecond, mergeArray) => {
     return objFirst;
 }
 
+const isHttp = str => {
+    var reg = new RegExp("/^(http:\/\/|https:\/\/)/");
+
+    return reg.test(str);
+}
+
+
+const setData = (name, value, cb) => {
+    // LocalForage.setItem(name, value, function(value){
+    //     if (typeof cb == "function") {
+    //         cb(value)
+    //     }
+    // });
+}
+const getData = (name, cb) => {
+    // LocalForage.getItem(name, function (err, value) {
+    //     if (err == null) {
+    //         if (typeof cb == "function") {
+    //             cb(value)
+    //         }
+    //     } else {
+    //         alert('data_err');
+    //     }
+    // });
+}
+util.removeData = (name, cb) => {
+    // LocalForage.removeItem(name, function () {
+    //     if (typeof cb == "function") {
+    //         cb(value)
+    //     }
+    // });
+}
+
 
 const ajax = options => {
     options.method = options.method != undefined ? options.method.toUpperCase() : 'GET';
@@ -87,6 +120,8 @@ const ajax = options => {
 
     wx.request(options);
 }
+
+
 
 
 module.exports = {
