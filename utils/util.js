@@ -73,7 +73,7 @@ const getData = (name, cb) => {
     //     }
     // });
 }
-util.removeData = (name, cb) => {
+const removeData = (name, cb) => {
     // LocalForage.removeItem(name, function () {
     //     if (typeof cb == "function") {
     //         cb(value)
@@ -81,9 +81,15 @@ util.removeData = (name, cb) => {
     // });
 }
 
+const baseUrl = "https://cyapi.smcdn.top";
 
 const ajax = options => {
     options.method = options.method != undefined ? options.method.toUpperCase() : 'GET';
+
+    if (options.url == undefined) {
+        return false;
+    }
+    options.url = baseUrl + options.url;
 
     const success = options.success;
     options.success != undefined ? delete options.success : '';
@@ -98,7 +104,7 @@ const ajax = options => {
             if (success != undefined) {
                 success(res.data, res);     // 处理返回结果
             } else {
-
+                
             }
         },
         fail: function (res) {
@@ -126,6 +132,7 @@ const ajax = options => {
 
 module.exports = {
     formatTime: formatTime,
+    baseUrl: baseUrl,
     ajax: ajax,
     extend: extend
 }

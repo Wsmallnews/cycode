@@ -2,9 +2,10 @@
 //获取应用实例
 const app = getApp()
 const { Actionsheet, Noticebar, extend } = require('../../zanui/index');
+const Util = require('../../utils/util');
 
 Page({
-    data: {
+    data: {     // 页面的初始数据
         motto: 'Hello World',
         userInfo: {},
         hasUserInfo: false,
@@ -28,7 +29,95 @@ Page({
         },
         loadStaus: {
             loading: true
+        },
+        merchs: []
+    },
+    onLoad: function (options) {       // 生命周期函数--监听页面加载
+        // 一个页面只会调用一次，可以在 onLoad 中获取打开当前页面所调用的 query 参数。
+        if (app.globalData.userInfo) {
+            this.setData({
+                userInfo: app.globalData.userInfo,
+                hasUserInfo: true
+            })
+        } else if (this.data.canIUse){
+            // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+            // 所以此处加入 callback 以防止这种情况
+            app.userInfoReadyCallback = res => {
+                this.setData({
+                  userInfo: res.userInfo,
+                  hasUserInfo: true
+                })
+            }
+        } else {
+            // 在没有 open-type=getUserInfo 版本的兼容处理
+            wx.getUserInfo({
+                success: res => {
+                    app.globalData.userInfo = res.userInfo
+                    this.setData({
+                        userInfo: res.userInfo,
+                        hasUserInfo: true
+                    })
+                }
+            })
         }
+
+        // 加载商家列表
+        this.getMerchs();
+
+        console.log('----onLoad');
+    },
+    onShow() {      // 生命周期函数--监听页面显示
+        console.log('----onShow');
+    },
+    onReady() {     // 生命周期函数--监听页面初次渲染完成
+        console.log('----onReady');
+    },
+    onHide() {      // 生命周期函数--监听页面隐藏
+        console.log('----onHide');
+    },
+    onUnload() {    // 生命周期函数--监听页面卸载
+        console.log('----onUnload');
+    },
+    onPullDownRefresh() {           // 页面相关事件处理函数--监听用户下拉动作
+        console.log('----I pull down');
+        // wx.stopPullDownRefresh可以停止当前页面的下拉刷新
+    },
+    onReachBottom() {               // 页面上拉触底事件的处理函数
+        console.log('----到底了');
+    },
+    onShareAppMessage() {           // 用户点击右上角转发
+        console.log('----share');
+
+        return {                    // 分享自定义内容
+            title: '自定义转发标题',
+            path: '/page/user?id=123'
+        }
+    },
+    onPageScroll(options) {                // 页面滚动触发事件的处理函数 包含页面 scrollTop
+        console.log('----page scroll');
+    },
+    onTabItemTap() {                // 当前是 tab 页时，点击 tab 时触发
+        console.log('----click tap');
+    },
+    showPageMethods() {                     // 简单展示 部分 page 对象常用属性
+        // Page.prototype.route
+        console.log(this.route);
+        this.setData({
+            'actionsheet.show': false
+        }, function () {
+            // 设置完成之后的回调
+        });
+    },
+    getMerchs () {
+        var _this = this;
+        console.log('request');
+        Util.ajax({
+            url: "/deskapi/merchs",
+            data: {page_size: 5},
+            success: function(result) {
+                _this.setData({merchs: result.result.data});
+            }
+        });
     },
     //事件处理函数
     bindViewTap: function() {
@@ -46,34 +135,6 @@ Page({
             'loadStaus': {nodata: true}
         });
     },
-    onLoad: function () {
-        if (app.globalData.userInfo) {
-            this.setData({
-                userInfo: app.globalData.userInfo,
-                hasUserInfo: true
-            })
-        } else if (this.data.canIUse){
-          // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-          // 所以此处加入 callback 以防止这种情况
-            app.userInfoReadyCallback = res => {
-                this.setData({
-                  userInfo: res.userInfo,
-                  hasUserInfo: true
-                })
-            }
-        } else {
-          // 在没有 open-type=getUserInfo 版本的兼容处理
-            wx.getUserInfo({
-                success: res => {
-                    app.globalData.userInfo = res.userInfo
-                    this.setData({
-                        userInfo: res.userInfo,
-                        hasUserInfo: true
-                    })
-                }
-            })
-        }
-    },
     getUserInfo: function(e) {
         console.log(e)
         app.globalData.userInfo = e.detail.userInfo
@@ -81,12 +142,10 @@ Page({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
-    },
-    onShow() {
-        // 在方法中传入对应的 componentId
-        // this.initZanNoticeBarScroll('noticebar');   // 参数对应 noticeBar 的 componentId
     }
 })
+
+
 
 
 // Page(Object.assign({}, Noticebar, {

@@ -4,7 +4,8 @@
         "pages/logs/logs",
         "pages/merchs/merchs",
         "pages/message/message",
-        "pages/personal/personal"
+        "pages/personal/personal",
+        "pages/demo/demo"
     ],
     "window": {
         "backgroundTextStyle":"light",
@@ -13,22 +14,35 @@
         "navigationBarTextStyle":"black"
     },
     "tabBar": {
+        "color": "#fff",
+        "selectedColor": "#f00",
+        "backgroundColor": "#000",
+        "borderStyle": "black",
+        "position": "bottom",
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "首页"
+                "text": "首页",
+                "iconPath": "/pages/images/index-icon.png",
+                "selectedIconPath": "/pages/images/index-iconed.png"
             },
             {
                 "pagePath": "pages/merchs/merchs",
-                "text": "附近"
+                "text": "附近",
+                "iconPath": "/pages/images/merchs-icon.png",
+                "selectedIconPath": "/pages/images/merchs-iconed.png"
             },
             {
-                "pagePath": "pages/message/message",
-                "text": "消息"
+                "pagePath": "pages/demo/demo",
+                "text": "示例",
+                "iconPath": "/pages/images/wallet-icon.png",
+                "selectedIconPath": "/pages/images/wallet-iconed.png"
             },
             {
                 "pagePath": "pages/personal/personal",
-                "text": "我的"
+                "text": "我的",
+                "iconPath": "/pages/images/personal-icon.png",
+                "selectedIconPath": "/pages/images/personal-iconed.png"
             }
         ]
     },
