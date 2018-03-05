@@ -30,49 +30,49 @@
   <!-- 导航 -->
   <view class='index-navbox'>
     <view class='index-nav'>
-      <image src='../images/test/index-navicon1.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>配件</text>
+      <image src='../images/test/tuijian.png' class='index-navicon'></image>
+      <text class='index-navtext'>推荐</text>
     </view>
     <view class='index-nav'>
-      <image src='../images/test/index-navicon2.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>加油</text>
+      <image src='../images/test/qiche.png' class='index-navicon'></image>
+      <text class='index-navtext'>汽车</text>
     </view>
     <view class='index-nav'>
-      <image src='../images/test/index-navicon3.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>维修</text>
+      <image src='../images/test/meishi.png' class='index-navicon'></image>
+      <text class='index-navtext'>美食</text>
     </view>
     <view class='index-nav'>
-      <image src='../images/test/index-navicon4.jpg' class='index-navicon'></image>
+      <image src='../images/test/shenghuo.png' class='index-navicon'></image>
+      <text class='index-navtext'>生活</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/hehuoren.png' class='index-navicon'></image>
+      <text class='index-navtext'>合伙人</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/qiandao.png' class='index-navicon'></image>
+      <text class='index-navtext'>签到</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/jifen.png' class='index-navicon'></image>
+      <text class='index-navtext'>积分</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/shangcheng.png' class='index-navicon'></image>
+      <text class='index-navtext'>商城</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/jinrong.png' class='index-navicon'></image>
       <text class='index-navtext'>金融</text>
     </view>
-    <view class='index-nav'>
-      <image src='../images/test/index-navicon5.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>救援</text>
-    </view>
-    <view class='index-nav'>
-      <image src='../images/test/index-navicon6.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>洗车</text>
-    </view>
-    <view class='index-nav'>
-      <image src='../images/test/index-navicon7.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>保养</text>
-    </view>
-    <view class='index-nav'>
-      <image src='../images/test/index-navicon8.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>违章</text>
-    </view>
-    <view class='index-nav'>
-      <image src='../images/test/index-navicon9.jpg' class='index-navicon'></image>
-      <text class='index-navtext'>保险</text>
-    </view>
     <view class='index-nav' bindtap='ontapindexmore'>
-      <image src='../images/test/index-navicon10.jpg' class='index-navicon'></image>
+      <image src='../images/test/more.png' class='index-navicon'></image>
       <text class='index-navtext'>更多</text>
     </view>
   </view>
   <!-- 公告 -->
   <view class='mart10 notice'>
-    <image src='../images/test/notice.png' class='notice-pic dis-inline'></image>
+    <image src='../images/index_news_27.png' class='notice-pic dis-inline'></image>
     <swiper autoplay="true" vertical="{{true}}" interval="2000" class='notice-swiper dis-inline'>
       <swiper-item>
         <text>车语钱包上线啦！新用户注册还有红包拿哦~新用户注册还有红包拿哦新用户注册还有红包拿哦新用户注册还有红包拿哦新用户注册还有红包拿哦</text>
@@ -92,54 +92,6 @@
         </view>
         <view class='activity-pic dis-inline'>
           <image src='../images/test/activity-icon1.png' class='activity-icon'></image>
-        </view>
-      </view>
-      <view class='activity-shop-coupon' bindtap="hbshow">
-        <view class='shop-pic-icon dis-inline'>
-          <image src='../images/test/shop-pic.jpg' class='index-shop-pic'></image>
-        </view>
-        <view class='shop-text-introduce dis-inline'>
-          <text class='shop-introduce-name'>车管家车管家车管家车管家车管家</text>
-          <view class='small-stars stars4'></view>
-        </view>
-        <view class='shop-yhcoupon dis-inline'>
-          <view class='money-coupon'>
-            <text class='money-symbol'>￥</text>
-            <text class='money-num'>100</text>
-          </view>
-          <text class='receive-coupon'>点击领取</text>
-        </view>
-      </view>
-      <view class='activity-shop-coupon' bindtap="hbshow">
-        <view class='shop-pic-icon dis-inline'>
-          <image src='../images/test/shop-pic.jpg' class='index-shop-pic'></image>
-        </view>
-        <view class='shop-text-introduce dis-inline'>
-          <text class='shop-introduce-name'>车管家车管家车管家车管家车管家</text>
-          <view class='small-stars stars4'></view>
-        </view>
-        <view class='shop-yhcoupon dis-inline'>
-          <view class='money-coupon'>
-            <text class='money-symbol'>￥</text>
-            <text class='money-num'>100</text>
-          </view>
-          <text class='receive-coupon'>点击领取</text>
-        </view>
-      </view>
-      <view class='activity-shop-coupon' bindtap="hbshow">
-        <view class='shop-pic-icon dis-inline'>
-          <image src='../images/test/shop-pic.jpg' class='index-shop-pic'></image>
-        </view>
-        <view class='shop-text-introduce dis-inline'>
-          <text class='shop-introduce-name'>车管家车管家车管家车管家车管家</text>
-          <view class='small-stars stars4'></view>
-        </view>
-        <view class='shop-yhcoupon dis-inline'>
-          <view class='money-coupon'>
-            <text class='money-symbol'>￥</text>
-            <text class='money-num'>100</text>
-          </view>
-          <text class='receive-coupon'>点击领取</text>
         </view>
       </view>
     </view>
