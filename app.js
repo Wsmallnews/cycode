@@ -1,7 +1,5 @@
 //app.js
-const Util = require("utils/util");     // 工具类
-
-const { Toast, extend } = require('zanui/index');        // 有赞组件
+const Util = require("libs/util");     // 工具类
 
 App({
     onLaunch: function () {         // 生命周期函数--监听小程序初始化	当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
@@ -53,7 +51,7 @@ App({
         userInfo: null
     },
     getUserInfo: function (cb) {
-        var that = this;
+        var _this = this;
         if (this.globalData.userInfo) {
             typeof cb == "function" && cb(this.globalData.userInfo)
         } else {

@@ -38,7 +38,7 @@ const extend = (objFirst, objSecond, mergeArray) => {
                     objFirst[s] = objFirst[s].concat(objSecond[s]);     // 合并
                 }
             } else if (typeof objSecond[s] === 'object') {          // 如果是对象
-                objFirst[s] = util.extend(objFirst[s], objSecond[s], mergeArray);
+                objFirst[s] = extend(objFirst[s], objSecond[s], mergeArray);
             } else {                        // 直接赋值
                 objFirst[s] = objSecond[s];
             }
@@ -104,14 +104,14 @@ const ajax = options => {
             if (success != undefined) {
                 success(res.data, res);     // 处理返回结果
             } else {
-                
+                toast({title: "处理成功"});
             }
         },
         fail: function (res) {
             if (error != undefined) {
                 error(res);
             } else {
-
+                toast({title: "处理失败"});
             }
         }
     }
@@ -127,12 +127,50 @@ const ajax = options => {
     wx.request(options);
 }
 
+const toast = options => {
+    var default_options = {
+        title: "",
+        icon: "none",       // "success", "loading", "none"
+        image: "",      // 自定义图标的本地路径，image 的优先级高于 icon
+        duration: 3000, // 3秒
+        mask: false,
+        success: undefined,
+        fail: undefined,
+        complete: undefined
+    }
 
+    options = extend(default_options, options);
+    wx.showToast(options);
+}
 
+const hideToast = () => {
+    wx.hideToast();
+}
+
+const loading = options => {
+    var default_options = {
+        title: "",
+        mask: false,
+        success: undefined,
+        fail: undefined,
+        complete: undefined
+    }
+
+    options = extend(default_options, options);
+    wx.showLoading(options);
+}
+
+const hideLoading = () => {
+    wx.hideLoading();
+}
 
 module.exports = {
     formatTime: formatTime,
     baseUrl: baseUrl,
     ajax: ajax,
-    extend: extend
+    extend: extend,
+    toast: toast,
+    hideToast: hideToast,
+    loading: loading,
+    hideLoading: hideLoading
 }

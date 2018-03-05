@@ -6,5 +6,8 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true,
-    "onReachBottomDistance": 50
+    "onReachBottomDistance": 50,
+    "usingComponents": {
+        "my-list": "/pages/includes/myList"
+    }
 }

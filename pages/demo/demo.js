@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const { Actionsheet, Noticebar, extend } = require('../../zanui/index');
-const Util = require('../../utils/util');
+// const { Actionsheet, Noticebar, Toast, extend } = require('../../zanui/index');
+const Util = require('../../libs/util');
 
 Page({
     data: {     // 页面的初始数据
@@ -68,6 +68,21 @@ Page({
     },
     onShow() {      // 生命周期函数--监听页面显示
         console.log('----onShow');
+        // this.showZanToast('success', 100000);
+        Util.toast({
+            title: '已完成'
+            // icon: 'success',
+            // duration: 3000
+        });
+        // wx.showActionSheet({
+        //     itemList: ['A', 'B', 'C'],
+        //     success: function(res) {
+        //         if (!res.cancel) {
+        //             console.log(res.tapIndex)
+        //         }
+        //     }
+        // });
+        console.log('----1122331');
     },
     onReady() {     // 生命周期函数--监听页面初次渲染完成
         console.log('----onReady');

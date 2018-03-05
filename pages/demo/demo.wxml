@@ -80,7 +80,7 @@
 
 <!-- 商家列表 -->
 <view>
-    <view wx:for="{{ merchs }}" class="zan-card" style="margin-bottom: 100rpx; margin-top: 100rpx">
+    <view wx:for="{{ merchs }}" wx:key="item.id" class="zan-card" style="margin-bottom: 100rpx; margin-top: 100rpx">
           <!-- 卡片左侧商品图片 -->
         <view class="zan-card__thumb">
             <image class="zan-card__img"
@@ -156,3 +156,12 @@
 <!-- noticeBar -->
 <import src="/zanui/noticebar/index.wxml" />
 <template is="zan-noticebar" data="{{ text: '展示文案', componentId: 'noticebar'  }}"></template>
+
+
+<import src="/zanui/toast/index.wxml" />
+<template is="zan-toast" data="{{ zanToast }}"></template>
+
+<component-tag-name>
+    <view slot="one">这里是插入到组件slot中的内容 one</view>
+    <view slot="two">这里是插入到组件slot中的内容 two</view>
+</component-tag-name>
