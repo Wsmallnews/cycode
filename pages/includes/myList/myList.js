@@ -34,7 +34,6 @@ Component({
         pullUp: true,
         cssLoading: true,
         loadTip: "正在加载...",
-        loadingGif: loadingGif,
         defaultListConf: {      // 默认配置参数
             url: "",
             pageSize: 10,
