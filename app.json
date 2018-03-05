@@ -5,7 +5,8 @@
         "pages/merchs/merchs",
         "pages/message/message",
         "pages/personal/personal",
-        "pages/demo/demo"
+        "pages/demo/demo",
+        "pages/nearby/nearby"
     ],
     "window": {
         "backgroundTextStyle":"light",
@@ -14,10 +15,10 @@
         "navigationBarTextStyle":"black"
     },
     "tabBar": {
-        "color": "#fff",
-        "selectedColor": "#f00",
-        "backgroundColor": "#000",
-        "borderStyle": "black",
+        "color": "#808080",
+        "selectedColor": "#0096EC",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "#f5f5f5",
         "position": "bottom",
         "list": [
             {
@@ -27,7 +28,7 @@
                 "selectedIconPath": "/pages/images/index-iconed.png"
             },
             {
-                "pagePath": "pages/merchs/merchs",
+                "pagePath": "pages/nearby/nearby",
                 "text": "附近",
                 "iconPath": "/pages/images/merchs-icon.png",
                 "selectedIconPath": "/pages/images/merchs-iconed.png"

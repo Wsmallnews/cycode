@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "wx8453ee04a1256a41",
+	"appid": "touristappid",
 	"projectname": "cycode",
 	"isGameTourist": false,
 	"condition": {

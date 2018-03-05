@@ -1,0 +1,107 @@
+<view class='container'>
+  <!-- 搜索框 -->
+  <view class='seach-box' style='position: fixed; z-index:666;' bindtap="onTap">
+    <view class='seach-box-input'>
+      <image src='../../images/seach-icon.png'></image>
+      <input type='text' placeholder='输入您要搜索的内容' placeholder-style='#9c9c9c'></input>
+    </view>
+    <view class='seach-box-btn'>
+      <text>搜索</text>
+    </view>
+  </view>
+  <!-- 筛选 -->
+  <view class='nav-filter'>
+    <view class="hide{{showfilternav?'show':''}}" bindtap="onChangeShowSta">选择分类 <image src='../../images/triangle-down.png' class='triangle-down'></image></view>
+    <view>好评优先</view>
+    <view>距离最近</view>
+  </view>
+   <view class="nav-filter-sub hide{{showfilternav?'':'show'}}">
+    <view class='nav-filter-sub-box'>
+      <view>配件</view>
+      <view>加油</view>
+      <view>汽车</view>
+      <view>金融</view>
+      <view>拖车</view>
+      <view>洗车</view>
+      <view>保养</view>
+    </view>
+  </view> 
+  <!-- 附近店铺 -->
+  <view class='nearshop-box'>
+    <view class='recommend-shop padd20'>
+    <view class='recommend-shop-pic dis-inline' bindtap='onshopdetail'>
+      <image src='../../images/shop-pic.jpg'></image>
+    </view>
+    <view class='recommend-shop-name'>
+      <view bindtap='onshopdetail'>
+        <image src='../../images/gold-grade.png' class='grade'></image>
+        <text class='shop-name'>丽车源（汽车美容）</text>
+        <view class='score'>
+          <view class='stars stars4'></view>
+          <text>人气 1239</text>
+        </view>
+        <view class='shop-text'>
+          <text>汽车</text>
+          <text>保养</text>
+          <text>洗车</text>
+        </view>
+        <view class='shop-address'>
+          <text class='shop-address-box'>东风南路与创业路交叉口向西500米</text>
+          <text class='shop-kilometer'>0.9KM</text>
+        </view>
+      </view>
+      <view class="shop-drop hide{{showView?'show':''}}" bindtap="onChangeShowState">
+        <image class='triangle-drop' src='../../images/triangle-top.jpg'></image>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon1.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon2.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+      </view>
+      <view class="shop-drop hide{{showView?'':'show'}}" bindtap="onChangeShowState">
+        <image class='triangle-drop' src='../../images/triangle-drop.jpg'></image>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon1.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon2.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+      </view>
+      <view class="shop-drop-content hide{{showView?'':'show'}}">
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon3.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon4.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../../images/shop-hdicon5.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+      </view>
+    </view>
+  </view>
+    
+  </view>
+</view>
