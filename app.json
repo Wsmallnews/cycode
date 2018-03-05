@@ -5,7 +5,8 @@
         "pages/merchs/merchs",
         "pages/message/message",
         "pages/personal/personal",
-        "pages/demo/demo"
+        "pages/demo/demo",
+        "pages/nearby/nearby"
     ],
     "window": {
         "backgroundTextStyle":"light",
@@ -27,7 +28,7 @@
                 "selectedIconPath": "/pages/images/index-iconed.png"
             },
             {
-                "pagePath": "pages/merchs/merchs",
+                "pagePath": "pages/nearby/nearby",
                 "text": "附近",
                 "iconPath": "/pages/images/merchs-icon.png",
                 "selectedIconPath": "/pages/images/merchs-iconed.png"

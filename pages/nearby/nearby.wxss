@@ -1,0 +1,52 @@
+@import "../publicitem/publicitem.wxss";
+.nav-filter{
+  width: 100%;
+  padding: 18rpx 0;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+  z-index: 666;
+  position: fixed;
+  top: 86rpx;
+}
+.nav-filter view{
+  width: 33.1%;
+  border-right: 1px solid #e6e6e6;
+  line-height: 34rpx;
+  text-align: center;
+  display: inline-block;
+  font-size: 26rpx;
+  color: #666;
+  position: relative;
+}
+.nav-filter view:last-child{
+  border-right: 0;
+}
+.nav-filter view .triangle-down{
+  width: 24rpx;
+  height: 14rpx;
+}
+.nav-filter-sub{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  overflow: hidden;
+  z-index: 444;
+}
+.nav-filter-sub-box{
+  position:relative;
+  top: 170rpx;
+  background: #fff;
+}
+.nav-filter-sub-box view{
+  font-size: 26rpx;
+  line-height: 94rpx;
+  padding-left:40rpx; 
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.nearshop-box{
+  margin-top:170rpx; 
+  width:100%
+}
