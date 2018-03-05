@@ -1,16 +1,281 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="userinfo">
-        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <block wx:else>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
+  <!-- 头部 -->
+  <view class='head-top'>
+    <view class='head-seacherdwbox'>
+      <view class='head-site-box' bindtap="onTapsite">
+        <text class='head-site'>郑州</text>
+        <image src='../images/test/drop-down.png' class='head-arrow'></image>
+      </view>
+      <view class='head-input-box' bindtap="onTapsearch">
+        <image src='../images/test/search-icon.png' class='head-search-icon'></image>
+        <text class='head-input'>搜索服务、商铺</text>
+      </view>
+      <view class='head-btn-box dis-inline'>
+        <image src='../images/test/index-iconhs.png' class='index-iconhs'></image>
+        <image src='../images/test/index-iconss.png' class='index-iconss'></image>
+      </view>
     </view>
-    <view class="usermotto">
-        <text class="user-motto">{{motto}}</text>
+    <view class='head-swiper'>
+      <swiper vertical="{{false}}" indicator-dots="true" autoplay="true" interval="5000" indicator-color="#fff" indicator-active-color="#666" class='banner-swiper'>
+        <swiper-item>
+          <image src='../images/test/banner.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+          <image src='../images/test/banner.jpg'></image>
+        </swiper-item>
+      </swiper>
     </view>
+  </view>
+  <!-- 导航 -->
+  <view class='index-navbox'>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon1.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>配件</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon2.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>加油</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon3.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>维修</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon4.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>金融</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon5.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>救援</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon6.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>洗车</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon7.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>保养</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon8.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>违章</text>
+    </view>
+    <view class='index-nav'>
+      <image src='../images/test/index-navicon9.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>保险</text>
+    </view>
+    <view class='index-nav' bindtap='ontapindexmore'>
+      <image src='../images/test/index-navicon10.jpg' class='index-navicon'></image>
+      <text class='index-navtext'>更多</text>
+    </view>
+  </view>
+  <!-- 公告 -->
+  <view class='mart10 notice'>
+    <image src='../images/test/notice.png' class='notice-pic dis-inline'></image>
+    <swiper autoplay="true" vertical="{{true}}" interval="2000" class='notice-swiper dis-inline'>
+      <swiper-item>
+        <text>车语钱包上线啦！新用户注册还有红包拿哦~新用户注册还有红包拿哦新用户注册还有红包拿哦新用户注册还有红包拿哦新用户注册还有红包拿哦</text>
+      </swiper-item>
+      <swiper-item>
+        <text>车语钱包上线啦！新用户注册还有红包拿哦~</text>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 活动 -->
+  <view class='mart10 index-activity'>
+    <view class='index-activity-column dis-inline'>
+      <view class='activity-box' bindtap="hbshow">
+        <view class='activity-text dis-inline'>
+          <text class='blue-text'>红包疯抢</text>
+          <text class='gary-text'>现金红包 抢到手软</text>
+        </view>
+        <view class='activity-pic dis-inline'>
+          <image src='../images/test/activity-icon1.png' class='activity-icon'></image>
+        </view>
+      </view>
+      <view class='activity-shop-coupon' bindtap="hbshow">
+        <view class='shop-pic-icon dis-inline'>
+          <image src='../images/test/shop-pic.jpg' class='index-shop-pic'></image>
+        </view>
+        <view class='shop-text-introduce dis-inline'>
+          <text class='shop-introduce-name'>车管家车管家车管家车管家车管家</text>
+          <view class='small-stars stars4'></view>
+        </view>
+        <view class='shop-yhcoupon dis-inline'>
+          <view class='money-coupon'>
+            <text class='money-symbol'>￥</text>
+            <text class='money-num'>100</text>
+          </view>
+          <text class='receive-coupon'>点击领取</text>
+        </view>
+      </view>
+      <view class='activity-shop-coupon' bindtap="hbshow">
+        <view class='shop-pic-icon dis-inline'>
+          <image src='../images/test/shop-pic.jpg' class='index-shop-pic'></image>
+        </view>
+        <view class='shop-text-introduce dis-inline'>
+          <text class='shop-introduce-name'>车管家车管家车管家车管家车管家</text>
+          <view class='small-stars stars4'></view>
+        </view>
+        <view class='shop-yhcoupon dis-inline'>
+          <view class='money-coupon'>
+            <text class='money-symbol'>￥</text>
+            <text class='money-num'>100</text>
+          </view>
+          <text class='receive-coupon'>点击领取</text>
+        </view>
+      </view>
+      <view class='activity-shop-coupon' bindtap="hbshow">
+        <view class='shop-pic-icon dis-inline'>
+          <image src='../images/test/shop-pic.jpg' class='index-shop-pic'></image>
+        </view>
+        <view class='shop-text-introduce dis-inline'>
+          <text class='shop-introduce-name'>车管家车管家车管家车管家车管家</text>
+          <view class='small-stars stars4'></view>
+        </view>
+        <view class='shop-yhcoupon dis-inline'>
+          <view class='money-coupon'>
+            <text class='money-symbol'>￥</text>
+            <text class='money-num'>100</text>
+          </view>
+          <text class='receive-coupon'>点击领取</text>
+        </view>
+      </view>
+    </view>
+    <view class='index-activity-column dis-inline'>
+      <view class='activity-box'>
+        <view class='activity-text dis-inline'>
+          <text class='blue-text'>限时购</text>
+          <text class='black-text'>丽车源汽车美容</text>
+          <text class='gary-text'>车载手机支架15元</text>
+        </view>
+        <view class='activity-pic dis-inline'>
+          <image src='../images/test/activity-icon2.png' class='activity-icon'></image>
+        </view>
+      </view>
+      <view class='activity-box'>
+        <view class='activity-text dis-inline'>
+          <text class='blue-text'>幸运大转盘</text>
+          <text class='black-text'>会员专属抽奖活动</text>
+          <text class='gary-text'>最新大奖：iphone6</text>
+        </view>
+        <view class='activity-pic dis-inline'>
+          <image src='../images/test/activity-icon3.png' class='activity-icon'></image>
+        </view>
+      </view>
+      <view class='activity-box'>
+        <view class='activity-text dis-inline'>
+          <text class='blue-text'>超划算</text>
+          <text class='black-text'>大海汽车美容</text>
+          <text class='gary-text'>会员车主5元洗车</text>
+        </view>
+        <view class='activity-pic dis-inline'>
+          <image src='../images/test/activity-icon4.png' class='activity-icon'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 广告位 -->
+  <image src='../images/test/advertising-bits.jpg' class='advertis mart10'></image>
+  <!-- 本地推荐 -->
+  <view class='mart10 recommend-title'>
+    <image src='../images/test/recommend-icon.png' class='recommend-icon'></image>
+    <text>本地推荐</text>
+  </view>
+  <view class='recommend-shop padd20'>
+    <view class='recommend-shop-pic dis-inline' bindtap='onshopdetail'>
+      <image src='../images/test/shop-pic.jpg'></image>
+    </view>
+    <view class='recommend-shop-name'>
+      <view bindtap='onshopdetail'>
+        <image src='../images/test/gold-grade.png' class='grade'></image>
+        <text class='shop-name'>丽车源（汽车美容）</text>
+        <view class='score'>
+          <view class='stars stars4'></view>
+          <text>人气 1239</text>
+        </view>
+        <view class='shop-text'>
+          <text>汽车</text>
+          <text>保养</text>
+          <text>洗车</text>
+        </view>
+        <view class='shop-address'>
+          <text class='shop-address-box'>东风南路与创业路交叉口向西500米</text>
+          <text class='shop-kilometer'>0.9KM</text>
+        </view>
+      </view>
+      <view class="shop-drop hide{{showView?'show':''}}" bindtap="onChangeShowState">
+        <image class='triangle-drop' src='../images/test/triangle-top.jpg'></image>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon1.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon2.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+      </view>
+      <view class="shop-drop hide{{showView?'':'show'}}" bindtap="onChangeShowState">
+        <image class='triangle-drop' src='../images/test/triangle-drop.jpg'></image>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon1.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon2.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+      </view>
+      <view class="shop-drop-content hide{{showView?'':'show'}}">
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon3.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon4.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+        <view class='shop-activity-list'>
+          <view class='shop-activity-pic'>
+            <image src='../images/test/shop-hdicon5.jpg'></image>
+          </view>
+          <text>会员洗车仅需会员洗车仅需10元会员洗车仅需10元会员洗车仅需10元10元</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
 
-<!-- <navigator url="/pages/demo/demo" hover-class="navigator-hover">查看示例</navigator> -->
-<view class="zan-btn zan-btn--primary zan-btn--large" bindtap="showDemo">查看示例</view>
+
+
+<!-- 弹出层红包内容，其中的“叉号”中绑定让弹出层消失的函数：bindtap="hide" -->
+<view class="modal-box" hidden="{{flag}}" bindtap="hbhide">
+
+  <view class="modal-body">
+    <view class="modal-content">
+      <view class='red-packet'>
+        <text class='red-packet-sum'>20<text class='red-packet-dw'>元</text></text>
+        <view class='red-packet-detail'>
+          <text>美容红包</text>
+          <text class='red-packet-text'>可用于洗车、打蜡、内饰清洗</text>
+        </view>
+      </view>
+      <view class="knowBtn">
+        <image src='../images/test/red-packetc.png' bindtap="hbhide"></image>
+      </view>
+    </view>
+  </view>
+</view>

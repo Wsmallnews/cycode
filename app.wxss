@@ -10,3 +10,71 @@
     padding: 200rpx 0;
     box-sizing: border-box;
 }
+page{
+ background-color:#f5f5f5;
+ line-height: 1.6;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif, Microsoft Yahei;
+ 
+}
+text{
+    font-size: 26rpx;
+}
+
+.blue{
+   color: #0096ec!important;
+ }
+ .black{
+   color: #333;
+ }
+ .gary{
+   color: #666;
+ }
+ 
+ .font28{
+   font-size: 28rpx;
+ }
+ .font30{
+   font-size: 30rpx;
+ }
+ .font26{
+   font-size: 26rpx;
+ }
+ .font22{
+   font-size: 22rpx;
+ }
+ .font32{
+   font-size: 32rpx!important;
+ }
+input{
+    font-family: MicroSoft YaHei;
+}
+.dis-inline{
+  display: inline-block;
+}
+.mart10{
+  margin-top: 10rpx;
+}
+.mart20{
+  margin-top: 20rpx;
+}
+.padd20{
+  padding: 20px;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.text-r{
+  text-align: right;
+}
+.sumbit-box{
+  padding: 20rpx;
+}
+.sumbit-btn{
+ width: 100%;
+ background: #0096eb;
+ color: #fff;
+ font-family: Microsoft Yahei;
+}
