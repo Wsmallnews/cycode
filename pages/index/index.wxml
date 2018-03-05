@@ -87,52 +87,57 @@
     <view class='index-activity-column dis-inline'>
       <view class='activity-box' bindtap="hbshow">
         <view class='activity-text dis-inline'>
-          <text class='blue-text'>红包疯抢</text>
+          <text class='blue-text' style="color:#f95353;">红包疯抢</text>
           <text class='gary-text'>现金红包 抢到手软</text>
         </view>
         <view class='activity-pic dis-inline'>
-          <image src='../images/test/activity-icon1.png' class='activity-icon'></image>
+          <image src='../images/index_newYear_38.png' class='activity-icon'></image>
+        </view>
+      </view>
+      <view class='activity-box'>
+        <view class='activity-text dis-inline'>
+          <text class='blue-text' style="color:#4caae9;">限时购</text>
+          <text class='gary-text'>9元观看3D IMAX电影</text>
+        </view>
+        <view class='activity-pic dis-inline'>
+          <image src='../images/index_newYear_36.png' class='activity-icon'></image>
         </view>
       </view>
     </view>
     <view class='index-activity-column dis-inline'>
       <view class='activity-box'>
         <view class='activity-text dis-inline'>
-          <text class='blue-text'>限时购</text>
-          <text class='black-text'>丽车源汽车美容</text>
-          <text class='gary-text'>车载手机支架15元</text>
+          <text class='blue-text' style="color:#f39b0b;">幸运大转盘</text>
+          <text class='gary-text'>会员专属抽奖活动</text>
         </view>
         <view class='activity-pic dis-inline'>
-          <image src='../images/test/activity-icon2.png' class='activity-icon'></image>
+          <image src='../images/index_newYear_43.png' class='activity-icon'></image>
         </view>
       </view>
       <view class='activity-box'>
         <view class='activity-text dis-inline'>
-          <text class='blue-text'>幸运大转盘</text>
-          <text class='black-text'>会员专属抽奖活动</text>
-          <text class='gary-text'>最新大奖：iphone6</text>
-        </view>
-        <view class='activity-pic dis-inline'>
-          <image src='../images/test/activity-icon3.png' class='activity-icon'></image>
-        </view>
-      </view>
-      <view class='activity-box'>
-        <view class='activity-text dis-inline'>
-          <text class='blue-text'>超划算</text>
-          <text class='black-text'>大海汽车美容</text>
+          <text class='blue-text' style="color:#ff4f6b;">超划算</text>
           <text class='gary-text'>会员车主5元洗车</text>
         </view>
         <view class='activity-pic dis-inline'>
-          <image src='../images/test/activity-icon4.png' class='activity-icon'></image>
+          <image src='../images/index_newYear_46.png' class='activity-icon'></image>
         </view>
       </view>
     </view>
   </view>
   <!-- 广告位 -->
   <image src='../images/test/advertising-bits.jpg' class='advertis mart10'></image>
+  <!-- 车语助手 -->
+  <view class='mart10 recommend-title'>
+    <image src='../images/index_newYear_53.png' class='recommend-icon'></image>
+    <text>车语助手</text>
+  </view>
+  <view class="cyhelper">
+
+  </view>
   <!-- 本地推荐 -->
   <view class='mart10 recommend-title'>
-    <image src='../images/test/recommend-icon.png' class='recommend-icon'></image>
+    <image src='../images/index_newYear_56.png' class='recommend-icon'></image>
     <text>本地推荐</text>
   </view>
   <view class='recommend-shop padd20'>
@@ -234,5 +239,5 @@
 
 
 
-  
+
 </view>

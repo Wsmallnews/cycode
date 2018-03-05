@@ -239,11 +239,14 @@
 }
 
 .activity-box{
-  padding: 30rpx;
+  padding:20rpx 30rpx;
   width: 100%;
   box-sizing: border-box;
   border-right:1px solid #e6e6e6;
   border-bottom:1px solid #e6e6e6;
+}
+.activity-box:nth-child(2) .blue-text{
+    color: #4caae9;
 }
 .activity-text{
   width: 70%;
@@ -260,7 +263,7 @@
 .blue-text{
   font-weight: bold;
   font-size: 28rpx;
-  color: #0096ec;
+  color: #f95353;
 }
 .gary-text{
   color: #b2b2b2;
@@ -288,7 +291,7 @@
    background: #fff;
    width: 100%;
    border-bottom: 1px solid #e6e6e6;
-   padding: 20rpx;
+   padding:10rpx 20rpx;
 }
 .recommend-icon{
   width: 30rpx;
@@ -365,4 +368,13 @@
 .modal-content .knowBtn image{
   width: 91rpx;
   height: 91rpx;
+}
+/* 车语助手 */
+.cyhelper{
+    width: 100%;
+    height: auto;
+}
+.cyhelper-box{
+    width:30%;
+    height: auto;
 }
