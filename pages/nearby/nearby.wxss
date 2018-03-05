@@ -1,4 +1,4 @@
-@import "../publicitem/publicitem.wxss";
+/* @import "../publicitem/publicitem.wxss"; */
 .nav-filter{
   width: 100%;
   padding: 18rpx 0;
@@ -42,11 +42,11 @@
 .nav-filter-sub-box view{
   font-size: 26rpx;
   line-height: 94rpx;
-  padding-left:40rpx; 
+  padding-left:40rpx;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .nearshop-box{
-  margin-top:170rpx; 
+  margin-top:170rpx;
   width:100%
 }
