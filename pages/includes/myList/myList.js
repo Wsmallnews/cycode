@@ -17,6 +17,10 @@ Component({
                 });
             }
         },
+        name: {
+            type: String,
+            value: ''
+        },
         noMore: {
             type: Boolean,
             value: false
@@ -55,8 +59,6 @@ Component({
         listInit: function (){
             var _this = this;
 
-            // _this.queryParams['page'] = _this.current;
-            // _this.queryParams['page_size'] = _this.cListConf['pageSize'];
             _this.setData({
                 'queryParams.page': _this.data.current,
                 'queryParams.page_size': _this.data.cListConf['pageSize']
@@ -64,10 +66,6 @@ Component({
 
             _this.listLoad();
         },
-        // listLoadData: function (cb) {         // 只获取数据
-        //     var _this = this;
-        //     _this.listBaseRequest(cb);
-        // },
         listLoad: function (is_reset) {      // 加载列表
             var _this = this;
 
@@ -84,7 +82,6 @@ Component({
                     _this.data.loading = false;
                     var data = result.result;
 
-                    // _this.total = data.total;
                     _this.setData({
                         total: data.total
                     });
@@ -93,8 +90,6 @@ Component({
                         _this.triggerEvent('setTotal', data.total);
                     }
 
-                    // _this.current = data.current_page;
-                    // _this.onePage = _this.total <= _this.cListConf.pageSize;
                     _this.setData({
                         current: data.current_page,
                         onePage: _this.data.total <= _this.data.cListConf.pageSize
@@ -118,12 +113,10 @@ Component({
                     }
 
                     if (data.current_page == 1) {
-                        // _this.item = item;
                         _this.setData({
                             item: item
                         });
                     } else {
-                        // _this.item = _this.item.concat(item);
                         _this.setData({
                             item: _this.data.item.concat(item)
                         });
@@ -135,9 +128,14 @@ Component({
 
 					_this.triggerEvent('requestFinish', detail);
 
+                    if (_this.data.name != '') {
+                        Util.setData({
+                            key: _this.data.name,
+                            data: _this.data.item
+                        });
+                    }
+
                     if (data.current_page >= data.last_page) {
-                        // _this.pullUp = false;   // 没有更多数据了
-                        // _this.loadTip = "别扯了，我是有底线的~";
                         if (data.current_page == 1 && item.length <= 0) {
                             _this.noData();
                         } else {
@@ -185,15 +183,6 @@ Component({
             });
             _this.listLoad();
         },
-        // listSelect: function(index){
-        //     this.triggerEvent('select', index);
-        // },
-        // listItemOper: function (cb) {
-        //     var _this = this;
-        //     if (cb != undefined && typeof cb == 'function') {
-        //         _this.item = cb(_this.item);
-        //     }
-        // },
         listReset () {
             this.setData({
                 pullUp: true,
@@ -214,26 +203,25 @@ Component({
         },
         listSearch: function(){         // 搜索
             var _this = this;
-            // _this.queryParams['page'] = 1;
+
             _this.setData({
                 'queryParams.page': 1
             });
             _this.listReset();
             _this.listLoad();
         },
-        keywordSearch: function(keyword){
-            var _this = this;
-            var key = _this.searchKey != undefined ? _this.searchKey : 'keyword';
-            _this.cListConf.searchParams[key] = keyword;
-            _this.listSearch();
-        },
+        // keywordSearch: function(keyword){
+        //     var _this = this;
+        //     var key = _this.searchKey != undefined ? _this.searchKey : 'keyword';
+        //     _this.cListConf.searchParams[key] = keyword;
+        //     _this.listSearch();
+        // },
         handStart() {
             this.listInit();
         },
         nextStart() {     // 滚动加载下一页
             var _this = this;
             if (!_this.data.noMore) {
-                console.log(_this.data.pullUp);
                 if (_this.data.pullUp) {
                     var nextPage = (_this.data.current) + 1;
                     _this.listNextPage(nextPage);
@@ -245,9 +233,24 @@ Component({
     },
     attached() { // 组件生命周期函数，在组件实例进入页面节点树时执行
         var _this = this;
-        if (!_this.data.isHandStart) {
-            _this.listInit();
+
+        if (_this.data.name != '') {    // 如果需要缓存，拿到缓存数据，绑定到页面
+            Util.getData({
+                key: _this.data.name,
+                success: function (data) {
+                    var detail = {
+                        item: data
+                    }
+                    _this.triggerEvent('requestFinish', detail);
+                }
+            });
         }
+        setTimeout(function() {
+            console.log("start request-------------- 有 bug ---------------");
+            if (!_this.data.isHandStart) {
+                _this.listInit();
+            }
+        }, 20000)
     },
     ready() {    // 组件生命周期函数，在组件布局完成后执行，此时可以获取节点信息（使用 SelectorQuery ）
 

@@ -35,7 +35,7 @@ Page({
             url: '/deskapi/merchs',
             item: [],
             searchParams: {
-                abc: '123'
+                keyword: ''
             }
         }
     },
@@ -94,6 +94,21 @@ Page({
     onReady() {     // 生命周期函数--监听页面初次渲染完成
         // console.log('----onReady');
         this.myList = this.selectComponent("#myList");
+
+        // Util.setData({
+        //     key: 'test',
+        //     data: {abc: 123, def: 234},
+        //     success: function (res) {
+        //         console.log(res);
+        //     }
+        // }, true);
+        // var data = Util.getData({
+        //     key: 'test',
+        //     success: function (res) {
+        //         console.log(res);
+        //     }
+        // });
+        // console.log(data);
     },
     onHide() {      // 生命周期函数--监听页面隐藏
         console.log('----onHide');
@@ -102,7 +117,7 @@ Page({
         console.log('----onUnload');
     },
     onPullDownRefresh() {           // 页面相关事件处理函数--监听用户下拉动作
-        console.log('----I pull down');
+        // console.log('----I pull down');
         // wx.stopPullDownRefresh可以停止当前页面的下拉刷新
     },
     onReachBottom() {               // 页面上拉触底事件的处理函数
@@ -117,7 +132,7 @@ Page({
         }
     },
     onPageScroll(options) {                // 页面滚动触发事件的处理函数 包含页面 scrollTop
-        console.log('----page scroll');
+        // console.log('----page scroll');
     },
     onTabItemTap() {                // 当前是 tab 页时，点击 tab 时触发
         console.log('----click tap');
@@ -170,39 +185,17 @@ Page({
         this.setData({
             'listConf.item': e.detail.item
         });
+    },
+    searchList: function (e) {
+        this.setData({
+            'listConf.searchParams.keyword': e.detail.value
+        });
+
+        this.myList.listSearch();
+    },
+    bindKeyInput: function(e) {
+        // this.setData({
+        //     inputValue: e.detail.value
+        // })
     }
 })
-
-
-
-
-// Page(Object.assign({}, Noticebar, {
-//   data: {
-//     movable: {
-//       text: '足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。'
-//     },
-//     static1: {
-//       text: '足协杯战线连续第2年上演广州德比战'
-//     },
-//     static2: {
-//       text: '足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。'
-//     }
-//   },
-//   onShow() {
-//     // 滚动通告栏需要initScroll
-//     this.initZanNoticeBarScroll('noticebar');
-//     // initScroll的通告栏如果宽度足够显示内容将保持静止
-//     // this.initZanNoticeBarScroll('static1');
-//     // 不进行initScroll的通告栏也将保持静止
-//     // this.initZanNoticeBarScroll('static2');
-//   }
-// }))
-
-// Page(extend({}, Actionsheet, {
-//     data: {
-//         actionsheet: {
-//             show: true,
-//             actions: []
-//         }
-//     }
-// }));
