@@ -1,7 +1,6 @@
 /**app.wxss**/
 @import "./zanui/index.wxss";
 
-
 .container {
     height: 100%;
     display: flex;
@@ -13,7 +12,7 @@ page{
  background-color:#f5f5f5;
  line-height: 1.6;
   font-family: -apple-system-font, "Helvetica Neue", sans-serif, Microsoft Yahei;
- 
+
 }
 text{
     font-size: 26rpx;
@@ -28,7 +27,7 @@ text{
  .gary{
    color: #666;
  }
- 
+
  .font28{
    font-size: 28rpx;
  }
@@ -132,10 +131,10 @@ input{
   float: left;
 }
 .recommend-shop-pic image{
-  width: 100%; 
-  height: 100%; 
-  max-width: 100%; 
-  display: block; 
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
   object-fit: cover;
 }
 .recommend-shop-name{
@@ -203,7 +202,7 @@ input{
  padding: 2rpx 4rpx;
  border: 1px solid #0096ec;
  border-radius: 3px;
- margin-right:10rpx; 
+ margin-right:10rpx;
 }
 .shop-address{
   flex-direction: row;
@@ -273,7 +272,7 @@ input{
 .hide{
  display: none;
 }
-.show{ 
+.show{
  display: block;
 }
 

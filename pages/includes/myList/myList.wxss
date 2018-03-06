@@ -1,1 +1,6 @@
 /* pages/merchs/merchs.wxss */
+@import "/zanui/index.wxss";
+
+.my-list {
+    margin-bottom: 100rpx;
+}

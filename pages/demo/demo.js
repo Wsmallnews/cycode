@@ -30,7 +30,14 @@ Page({
         loadStaus: {
             loading: true
         },
-        merchs: []
+        merchs: [],
+        listConf: {
+            url: '/deskapi/merchs',
+            item: [],
+            searchParams: {
+                abc: '123'
+            }
+        }
     },
     onLoad: function (options) {       // 生命周期函数--监听页面加载
         // 一个页面只会调用一次，可以在 onLoad 中获取打开当前页面所调用的 query 参数。
@@ -85,7 +92,8 @@ Page({
         console.log('----1122331');
     },
     onReady() {     // 生命周期函数--监听页面初次渲染完成
-        console.log('----onReady');
+        // console.log('----onReady');
+        this.myList = this.selectComponent("#myList");
     },
     onHide() {      // 生命周期函数--监听页面隐藏
         console.log('----onHide');
@@ -98,7 +106,7 @@ Page({
         // wx.stopPullDownRefresh可以停止当前页面的下拉刷新
     },
     onReachBottom() {               // 页面上拉触底事件的处理函数
-        console.log('----到底了');
+        this.myList.nextStart();
     },
     onShareAppMessage() {           // 用户点击右上角转发
         console.log('----share');
@@ -125,14 +133,14 @@ Page({
     },
     getMerchs () {
         var _this = this;
-        console.log('request');
-        Util.ajax({
-            url: "/deskapi/merchs",
-            data: {page_size: 5},
-            success: function(result) {
-                _this.setData({merchs: result.result.data});
-            }
-        });
+        // console.log('request');
+        // Util.ajax({
+        //     url: "/deskapi/merchs",
+        //     data: {page_size: 5},
+        //     success: function(result) {
+        //         _this.setData({merchs: result.result.data});
+        //     }
+        // });
     },
     //事件处理函数
     bindViewTap: function() {
@@ -157,6 +165,11 @@ Page({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
+    },
+    requestFinish: function (e) {
+        this.setData({
+            'listConf.item': e.detail.item
+        });
     }
 })
 
