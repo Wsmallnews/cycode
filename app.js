@@ -65,18 +65,18 @@ App({
                     wx.getUserInfo({//getUserInfo流程
                         success: function (result) {//获取userinfo成功
                             console.log(result);
-                            Util.ajax({
-                                url: '/deskapi/mini',
-                                data: {
-                                    code: code,
-                                    iv: result.iv,
-                                    encrypt: result.encryptedData
-                                },
-                                success: function (res1) {
-                                    console.log("----");
-                                    console.log(res1);
-                                }
-                            })
+                            // Util.ajax({
+                            //     url: '/deskapi/mini',
+                            //     data: {
+                            //         code: code,
+                            //         iv: result.iv,
+                            //         encrypt: result.encryptedData
+                            //     },
+                            //     success: function (res1) {
+                            //         console.log("----");
+                            //         console.log(res1);
+                            //     }
+                            // })
                         }
                     })
                 }

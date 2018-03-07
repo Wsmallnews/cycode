@@ -1,20 +1,17 @@
 /**app.wxss**/
 @import "./zanui/index.wxss";
-
 .container {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    padding: 200rpx 0;
     box-sizing: border-box;
 }
 page{
  background-color:#f5f5f5;
  line-height: 1.6;
   font-family: -apple-system-font, "Helvetica Neue", sans-serif, Microsoft Yahei;
- 
+
 }
 text{
     font-size: 26rpx;
@@ -29,7 +26,7 @@ text{
  .gary{
    color: #666;
  }
- 
+
  .font28{
    font-size: 28rpx;
  }
@@ -77,4 +74,307 @@ input{
  background: #0096eb;
  color: #fff;
  font-family: Microsoft Yahei;
+}
+/* 搜索框 */
+.seach-box{
+  width: 100%;
+  padding: 0 20rpx 25rpx 20rpx;
+  overflow: hidden;
+  height: 60rpx;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.seach-box-input{
+  width: 82%;
+  height: 60rpx;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.seach-box-input image{
+  width: 28rpx;
+  height: 29rpx;
+  position: absolute;
+  top: 16rpx;
+  left: 20rpx;
+}
+.seach-box-input input{
+  height: 60rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 60rpx;
+  background: #f5f5f5;
+  border-radius: 60rpx;
+  padding-left: 66rpx;
+  box-sizing: border-box;
+}
+.seach-box-btn{
+  width: 15%;
+  font-size: 24rpx;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: #0096ec;
+}
+
+
+.recommend-shop{
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+.recommend-shop-pic{
+  width: 32%;
+  height: 146rpx;
+  float: left;
+}
+.recommend-shop-pic image{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.recommend-shop-name{
+  width: 65%;
+  float: right;
+  position: relative;
+}
+.grade{
+  position: absolute;
+  width: 96rpx;
+  height: 27rpx;
+  right: 0;
+  top: 10rpx;
+}
+.shop-name{
+  font-size: 30rpx;
+  width: 70%;
+  height: 30rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  display: inline-block;
+  color: #2e2e2e;
+}
+.score{
+  display: flex;
+  flex-direction: row;
+}
+.stars{
+  width: 158rpx;
+  height: 23rpx;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAAXCAYAAAB6bJZRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA25pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDplMWJjMjAyOS1mYjE4LTcyNGYtYmMzNy00NTQ5MjExNjQzMTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0Q1NDY3MDdDMkNEMTFFNzk4NDNDRjk2ODlCMzg2NTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0Q1NDY3MDZDMkNEMTFFNzk4NDNDRjk2ODlCMzg2NTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDQwODU3OURDMkNEMTFFN0IwMEU5OTFGRDBBNjNDQkEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDQwODU3OUVDMkNEMTFFN0IwMEU5OTFGRDBBNjNDQkEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7GUNd9AAACx0lEQVR42uycPWsUURSGbxI1KAELGwsJIUGIsZKo2FlNEVBJnSD+BBVBBBHWQsHGQn+AjXZiZxo78we0SbWIYALxg0X8SOHX9R1nhHHMDHdm7p2ww3PgXfZjds9zDy+HMx87u6y15k88GzGOcUm6LD2WrpidCRiGtQaRddqs3+/jBfwYnGGkYgM8IH3IvD4qrbW8SBiGuQZ+GyBewI+NGEYrJrmRe31nB7o8DNQABvzohaHKBLhX+iyN5d6flN60tEgYhr0G/iZAvIAfGzNUmQCvbpMgjlstdnkYqAEM+NEbQ5UJ8Ku0r+Cz/dKnFhYKw7DXwN8EiBfwY2OGsV6vlzx7dTP/2UGTHEg8Ld2XDpcAnJW+SRPSL4+LhqFrNZjpOSUcDAZ4AT8GZ8hPgBelBWlWOlQwVrrEhvQ6/lXpbrp/7howdLkGkXViSCdAvIAfgzJkG+AjPS4FGE+fSmcct4Wh6zWIrBODGiBewI/BGbInQSYC7Z+PV9gWBmoAA35sjSE7Ae7R46p00mOCeNQ8Yf69QLEsYOh6DSLrxKAJEC/gx+AM2QkwPlB4SnrhKcG6dKzCImGgBjDgx1YZ8tcB2rQzv2yYYFOalz7W+C4M1AAG/NgKw3YXQv9IE601SHBcetcAEgZqAAN+DM5Q9E+Q79K5mkkumORUc9OAgRrAgB+DMpT9Fe5LzSTvjb+AgRrAgB+DMZQ1wPmaSXyeqYGBGsCAH4MxlDXAuZpJ5jwuFAZqAAN+DMZQ1gCP1Ewy63GhMFADGPBjMIbRGsBvpYdSv4WFwkANYMCPwRiKGuBuk5xuzsZP6bY0LZ03yR0Yrpn/D0hOpmoaMFADGPBjUIaiBmjTbvo3HqQ/fl3ayrwf33Z6SrqX+/6Wh4XCQA1gwI9BGcpuiBp32WXpufTEASySFqUVk9zpwUfA0LUa1L8hKl7Aj94ZfgswADszkUAXVJktAAAAAElFTkSuQmCC");
+  background-size: 320rpx 23rpx;
+  display:inline-block;
+}
+.stars.stars5{
+  background-position: 0 0;
+}
+.stars.stars4{
+  background-position: -34rpx 0;
+}
+.stars.stars3{
+  background-position: -66rpx 0;
+}
+.stars.stars2{
+  background-position: -98rpx 0;
+}
+.stars.stars1{
+  background-position: -131rpx 0;
+}
+.stars.stars0{
+  background-position: -163rpx 0;
+}
+.score text{
+  font-size: 22rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+  color: #999;
+  display: inline-block;
+  line-height: 23rpx;
+}
+.shop-text text{
+ font-size: 20rpx;
+ display: inline-block;
+ color: #0096ec;
+ padding: 2rpx 4rpx;
+ border: 1px solid #0096ec;
+ border-radius: 3px;
+ margin-right:10rpx;
+}
+.shop-address{
+  flex-direction: row;
+  height: 36rpx;
+  width: 100%;
+}
+.shop-address-box{
+  width: 75%;
+  display: inline-block;
+  font-size: 22rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  color: #999;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.shop-kilometer{
+  width: 25%;
+  display: inline-block;
+  color: #999;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  vertical-align: middle;
+  text-align: right;
+}
+.shop-drop{
+ margin-top: 6rpx;
+ width: 100%;
+ position: relative;
+}
+.shop-activity-list{
+  width: 100%;
+  height: 26rpx;
+  margin-bottom: 10rpx;
+}
+.shop-activity-list text{
+  font-size: 20rpx;
+  vertical-align: middle;
+  color: #969696;
+  margin-left: 8rpx;
+  width: 60%;
+  height: 26rpx;
+  line-height: 26rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+.shop-activity-pic{
+  width: 91rpx;
+  display: inline-block;
+}
+.shop-activity-pic image{
+  width: 91rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+.triangle-drop{
+  width: 17rpx;
+  height: 10rpx;
+  position: absolute;
+  right: 0;
+  top: 25rpx;
+}
+.shop-drop-content{
+  width: 100%;
+}
+.hide{
+ display: none;
+}
+.show{
+ display: block;
+}
+
+/* 评价 */
+.comment-shop-box{
+  padding:40rpx 20rpx 20rpx;
+}
+.comment-user{
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.comment-user-pic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.comment-user-text{
+  height: 45rpx;
+  vertical-align: middle;
+}
+.comment-user-info{
+  margin-left: 16rpx;
+  vertical-align: middle;
+}
+.comment-author-name{
+  font-size: 28rpx;
+  color: #333;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.comment-author-grade{
+  width: 76rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+.comment-author-rz{
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.comment-content text{
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  line-height: 42rpx;
+}
+.comment-content-pic{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.comment-pic{
+  width: 33.333%;
+  height: 100%;
+  padding: 0 5rpx;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.comment-pic-img{
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background: #000;
+}
+.comment-pic-img image{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.comment-time{
+  margin-top: 10rpx;
+}
+.comment-time text{
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.comment-reply{
+  background: #f5f5f5;
+  padding: 20rpx;
+  margin-top: 10rpx;
+}
+#zan-tab .zan-tab{
+    height: 80rpx !important;
+}
+#zan-tab .zan-tab__title{
+    height: 118rpx !important;
+    line-height: 118rpx !important;
+}
+#zan-tab .zan-tab__title_text{
+    display:block;
+    width:100%;
+    height:60rpx;
+    line-height:30rpx;
+    padding-top: 10rpx;
+}
+#zan-tab .zan-tab__title image{
+    display:block;
+    width:55rpx;
+    height:55rpx;
+    margin:0 auto;
+    padding-top:10rpx;
 }

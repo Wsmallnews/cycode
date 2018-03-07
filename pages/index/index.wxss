@@ -89,38 +89,40 @@
      height:300rpx;
  }
  /*导航*/
- .index-navbox{
+.index-navbox{
     width: 100%;
     background: #fff;
     flex-direction:row;
     padding: 35rpx 35rpx 0 35rpx;
     box-sizing:border-box;
- }
- .index-nav{
+}
+.index-nav{
    width: 20%;
    float: left;
    text-align: center;
    margin-bottom: 46rpx;
- }
- .index-navicon{
-   width: 66rpx;
-   height: 66rpx;
- }
- .index-navtext{
+}
+.index-navicon{
+   width: 80rpx;
+   height: 80rpx;
+   display: block;
+   margin: 0 auto;
+}
+.index-navtext{
    display: block;
    font-size: 24rpx;
    color: #333;
    margin-top: 18rpx;
- }
+}
   /*公告*/
 .notice{
   background: #fff;
-  padding: 14rpx 20rpx 20rpx 20rpx;
+  padding: 0rpx 20rpx 10rpx 20rpx;
   flex-direction: row;
 }
 .notice-pic{
-  width: 85rpx;
-  height: 41rpx;
+  width: 110rpx;
+  height: 37rpx;
   vertical-align: middle;
   border-right: 1px solid #e6e6e6;
   padding-right: 16rpx;
@@ -174,7 +176,7 @@
   height: 28rpx;
   line-height: 28rpx;
   display: inline-block;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .activity-shop-coupon .index-shop-pic{
   width: 60rpx;
@@ -240,8 +242,8 @@
   padding: 30rpx;
   width: 100%;
   box-sizing: border-box;
-  border-right:1px solid #e6e6e6; 
-  border-bottom:1px solid #e6e6e6; 
+  border-right:1px solid #e6e6e6;
+  border-bottom:1px solid #e6e6e6;
 }
 .activity-text{
   width: 70%;
@@ -275,7 +277,7 @@
 .activity-icon{
   width: 102rpx;
   height: 102rpx;
-  
+
 }
 .advertis{
   width: 100%;
@@ -324,7 +326,7 @@
 
 .modal-content{
   width: 549rpx;
-  height:auto; 
+  height:auto;
 }
 .modal-content .red-packet{
  width: 549rpx;
@@ -345,7 +347,7 @@
 }
 .red-packet-detail{
   color: #ecc779;
-  margin-top: 160rpx;  
+  margin-top: 160rpx;
 }
 .red-packet-detail text{
   font-size: 40rpx;
