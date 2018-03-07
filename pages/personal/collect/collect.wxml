@@ -1,0 +1,26 @@
+<view class='container'>
+  <view class='list-collect'>
+    <image src='../../../images/shop-pic.jpg' class='collect-shop-pic fl'></image>
+    <view class='collect-shop-text fl'>
+      <text class='collect-shop-name'>车管家汽车美容车管家汽车美容车管家汽车美容</text>
+      <text class='collect-shop-follow'>1.2万人关注</text>
+    </view>
+    <image src='../../../images/triangle-right.png' class='collect-shop-triangle'></image>
+  </view>
+  <view class='list-collect'>
+    <image src='../../../images/shop-pic.jpg' class='collect-shop-pic fl'></image>
+    <view class='collect-shop-text fl'>
+      <text class='collect-shop-name'>车管家汽车美容车管家汽车美容车管家汽车美容</text>
+      <text class='collect-shop-follow'>1.2万人关注</text>
+    </view>
+    <image src='../../../images/triangle-right.png' class='collect-shop-triangle'></image>
+  </view>
+  <view class='list-collect'>
+    <image src='../../../images/shop-pic.jpg' class='collect-shop-pic fl'></image>
+    <view class='collect-shop-text fl'>
+      <text class='collect-shop-name'>车管家汽车美容车管家汽车美容车管家汽车美容</text>
+      <text class='collect-shop-follow'>1.2万人关注</text>
+    </view>
+    <image src='../../../images/triangle-right.png' class='collect-shop-triangle'></image>
+  </view>
+</view>

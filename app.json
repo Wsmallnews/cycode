@@ -4,48 +4,19 @@
         "pages/logs/logs",
         "pages/merchs/merchs",
         "pages/message/message",
+
         "pages/personal/personal",
+        "pages/personal/modify/modify",
+
         "pages/demo/demo",
-        "pages/nearby/nearby"
+        "pages/nearby/nearby",
+        "pages/nearby/merch/merch"
     ],
     "window": {
         "backgroundTextStyle":"light",
-        "navigationBarBackgroundColor": "#fff",
+        "navigationBarBackgroundColor": "#0096EC",
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle":"black"
-    },
-    "tabBar": {
-        "color": "#808080",
-        "selectedColor": "#0096EC",
-        "backgroundColor": "#ffffff",
-        "borderStyle": "#f5f5f5",
-        "position": "bottom",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "/pages/images/index-icon.png",
-                "selectedIconPath": "/pages/images/index-iconed.png"
-            },
-            {
-                "pagePath": "pages/nearby/nearby",
-                "text": "附近",
-                "iconPath": "/pages/images/merchs-icon.png",
-                "selectedIconPath": "/pages/images/merchs-iconed.png"
-            },
-            {
-                "pagePath": "pages/demo/demo",
-                "text": "示例",
-                "iconPath": "/pages/images/wallet-icon.png",
-                "selectedIconPath": "/pages/images/wallet-iconed.png"
-            },
-            {
-                "pagePath": "pages/personal/personal",
-                "text": "我的",
-                "iconPath": "/pages/images/personal-icon.png",
-                "selectedIconPath": "/pages/images/personal-iconed.png"
-            }
-        ]
     },
     "networkTimeout": {
         "request": 10000,

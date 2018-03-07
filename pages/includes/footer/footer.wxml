@@ -1,0 +1,27 @@
+<!--底部  -->
+<view class="footer">
+    <navigator url="/pages/index/index" hover-class="navigator-hover">
+        <view class='footer-box'>
+            <image src="../../images/index-icon.png"></image>
+            <text>首页</text>
+        </view>
+    </navigator>
+    <navigator url="/pages/nearby/nearby" hover-class="navigator-hover">
+        <view class='footer-box'>
+            <image src="../../images/merchs-icon.png"></image>
+            <text>附近</text>
+        </view>
+    </navigator>
+    <navigator url="/pages/demo/demo" hover-class="navigator-hover">
+        <view class='footer-box'>
+            <image src="../../images/wallet-icon.png"></image>
+            <text>示例</text>
+        </view>
+    </navigator>
+    <navigator url="/pages/personal/personal" hover-class="navigator-hover">
+        <view class='footer-box'>
+            <image src="../../images/personal-icon.png"></image>
+            <text>我的</text>
+        </view>
+    </navigator>
+</view>

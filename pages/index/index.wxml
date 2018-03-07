@@ -136,20 +136,20 @@
         <view class="cyhelper-box fl">
             <text>停车场</text>
             <text>最近200米</text>
-            <image src="../images/index-assistant_02_03.png" style="width:141rpx;height:169rpx;"></image>
+            <image src="../images/index-assistant_02_03.png" style="width:141rpx;height:133rpx;"></image>
         </view>
         <view class="cyhelper-box fl">
             <text>洗车</text>
             <!-- <text>今天<text style='display:block;width:50rpx;height:20rpx;float:left;'>较适宜</text>洗车</text> -->
-            <view>
+            <view style='height:50rpx;padding-bottom:20rpx;'>
                 <text class='fl' style="padding-top:0;padding-left:30rpx;">今天</text><text class='fl' style='color:#00b561;'>较适宜</text><text class='fl'>洗车</text>
             </view>
-            <image src="../images/index-assistant_02_05.png" style="width:206rpx;height:169rpx;"></image>
+            <image src="../images/index-assistant_02_05.png" style="width:184rpx;height:133rpx;"></image>
         </view>
         <view class="cyhelper-box fr">
             <text>加油站</text>
             <text>最近1200米</text>
-            <image src="../images/index-assistant_02_06.png" style="width:144rpx;height:169rpx;"></image>
+            <image src="../images/index-assistant_02_06.png" style="width:119rpx;height:133rpx;"></image>
         </view>
     </view>
     <!-- 本地推荐 -->
@@ -248,4 +248,27 @@
             </view>
         </view>
     </view>
+</view>
+<view style="width:100%;height:100rpx;"></view>
+<!--底部  -->
+<!-- <view class="footer">
+    <view class='footer-box fl'>
+        <image src="../images/index-icon.png"></image>
+        <text>首页</text>
+    </view>
+    <view class='footer-box fl'>
+        <image src="../images/merchs-icon.png"></image>
+        <text>附近</text>
+    </view>
+    <view class='footer-box fl'>
+        <image src="../images/wallet-icon.png"></image>
+        <text>示例</text>
+    </view>
+    <view class='footer-box fl'>
+        <image src="../images/personal-icon.png"></image>
+        <text>我的</text>
+    </view>
+</view> -->
+<view>
+    <my-footer></my-footer>
 </view>

@@ -1,0 +1,106 @@
+<import src="../../publicitem/publicitem.wxml" />
+<view class='container'>
+<!-- banner -->
+  <swiper vertical="{{false}}" indicator-dots="true" autoplay="true" interval="5000" indicator-color="#fff" indicator-active-color="#666" class='shop-banner-swiper'>
+    <swiper-item>
+      <image src='../../images/test/shop-detailpic.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+       <image src='../../images/test/shop-detailpic.jpg'></image>
+    </swiper-item>
+   </swiper>
+<!-- 店铺名称 -->
+  <view class='shop-detail-name'>
+    <view class='shop-name-stars'>
+      <view class='shop-name-box'>
+        <text>车管家汽车美容</text>
+        <image src='../../images/test/biggold-grade.png'></image>
+      </view>
+      <view class='stars-fans'>
+        <view class='big-stars stars3'></view>
+        <text>人气1289</text>
+        <text>1.2万粉丝</text>
+      </view>
+      <view class='shop-follow'>
+        <image src='../../images/shop-follow.png'></image>
+        <text>关注</text>
+      </view>
+    </view>
+  </view>
+<!-- 店铺地址 -->
+  <view class='shop-detail-site'>
+    <image src='../../images/address-icon.png' class='fl'></image>
+    <text class='fl'>河南省郑州市郑东新区东风南路创业路绿地之窗云峰A座903</text>
+  </view>
+<!-- 地图电话 --> 
+  <view class='mart10 shop-map-tel'>
+    <view class='shop-icontext' bindtap='onTapmap'>
+      <image src='../../images/shop-map-icon.png'></image>
+      <text>查看地图</text>
+    </view>
+    <view class='shop-icontext'>
+      <image src='../../images/shop-tel-icon.png'></image>
+      <text>联系我们</text>
+    </view>
+  </view>
+ <!-- 会员特权 营业时间 -->  
+ <view class='shop-list mart10'>
+  <view class='shop-list-box'>
+    <text class='vip-zhekou'>车主会员特权：<text class='blue'>8.8折</text></text>
+  </view>
+  <view class='shop-list-box'>
+    <text class='vip-zhekou'>营业时间：<text class='black'>08:30—21:30</text></text>
+  </view>
+ </view>
+ <!-- 店铺活动 -->  
+ <view class='shop-list mart10'>
+  <view class='shop-list-box'>
+    <image src='../../images/test/shop-bqlabel1.png' class='shop-bqlabel'></image>
+    <text>星期六9点-10点汽车坐垫减半</text>
+  </view>
+  <view class='shop-list-box'>
+    <image src='../../images/test/shop-bqlabel2.png' class='shop-bqlabel'></image>
+    <text>会员洗车仅需10元</text>
+  </view>
+ </view>
+ <!-- 用户评价 --> 
+ <view class='mart10 uesr-evaluate'>
+  <view class='uesr-evaluate-tit'>
+    <image src='../../images/uesr-evaluateicon.jpg'></image>
+    <text>用户评论（24）</text>
+  </view>
+  <view class='comment-shop-box'>
+      <view class='comment-user'>
+        <image src='../../images/test/personal-head.png' class='comment-user-pic fl'></image>
+        <view class='fl comment-user-info'>
+          <view class='comment-user-text'>
+            <text class='comment-author-name'>刘玉玺</text>
+            <image src='../../images/test/personal-grade.png' class='comment-author-grade'></image>
+          </view>
+          <text class='comment-author-rz'>车主认证：福特福克斯 2012款</text>
+        </view>
+      </view>
+      <view class='comment-content'>
+        <text>服务周到，付款方便，实在太棒啦！强烈推荐！服务周到，付款方便，实在太棒啦！强烈推荐！</text>
+        <view class='comment-content-pic'>
+          <view class='comment-pic'>
+             <view class='comment-pic-img'><image src='../../images/test/shop-pic.jpg'></image></view>
+          </view>
+          <view class='comment-pic'>
+            <view class='comment-pic-img'><image src='../../images/test/shop-pic.jpg'></image></view>
+          </view>
+          <view class='comment-pic'>
+            <view class='comment-pic-img'><image src='../../images/test/shop-pic.jpg'></image></view>
+          </view>
+        </view>
+      </view>
+      <view class='comment-time'>
+        <text>2017-10-17 13:46:58</text>
+      </view>
+      <view class='comment-reply'>
+        <text class='blue'>商家回复：</text>
+        <text>感谢对我们的支持。感谢对我们的支持。感谢对我们的支持。感谢对我们的支持。感谢对我们的支持。</text>
+      </view>
+    </view>
+ </view>
+</view>

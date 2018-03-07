@@ -1,0 +1,41 @@
+.modify-list{ 
+  background: #fff; 
+  border-top: 1px solid #e6e6e6;
+  }
+.modify-tr{
+  line-height: 50rpx;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.modify-tr text.modify-zd{
+  font-size: 28rpx;
+  width: 160rpx;
+  display: inline-block;
+}
+.triangle-right{
+  width: 12rpx;
+  height: 22rpx;
+  position: absolute;
+  right: 20rpx;
+  top:50%;
+  margin-top: -11rpx;
+}
+.modify-info{
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 30rpx;
+}
+.modify-tr:last-child{
+  border-bottom: none;
+}
+.modify-headpic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right:30rpx;
+
+}

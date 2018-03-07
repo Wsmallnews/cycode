@@ -1,0 +1,85 @@
+.trade-tab{
+width: 100%;
+background: #fff;
+box-sizing: border-box;
+padding: 20rpx;
+border: 1px solid #e6e6e6;
+border-left: 0;
+border-right: 0;
+display: flex;
+flex-direction: row;
+}
+
+.trade-tab text{
+  position: relative;
+}
+.default{
+  text-align:center;
+  flex:1;
+  border-right:1px solid #e6e6e6;
+}
+.blue{
+  text-align:center;
+  color:#0096ec;
+  flex:1;
+  border-right:1px solid #e6e6e6;
+  }
+.blue::before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -20rpx;
+  left: 0;
+  border-bottom: 2px solid #0096ec;
+} 
+.trade-tab text:last-child{
+  border-right: 0;
+}
+
+.trade-list{
+  background: #fff;
+  padding:30rpx 20rpx 0 20rpx;
+  overflow: hidden;
+}
+.trade-list:last-child{
+  padding-bottom: 30rpx;
+}
+.trade-info,.trade-num{
+  width: 50%;
+}
+.trade-num{
+  text-align: right;
+  vertical-align: middle;
+}
+.trade-info{
+  padding-left: 24rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.trade-info:nth-of-type(odd)::after{
+  position: absolute;
+  content: "";
+  top: 20rpx;
+  left: 0;
+  width: 8rpx;
+  height: 8rpx;
+  background: #22ac38;
+  border-radius: 50%;
+}
+.trade-info text{
+  display: block;
+  width: 100%;
+  line-height: 35rpx;
+  height: 35rpx;
+  overflow: hidden;
+  margin: 8rpx 0;
+  text-align: left;
+}
+.trade-num text{
+  font-size: 42rpx;
+  line-height: 100rpx;
+  display: inline-block;
+}
+
+.show{display:block;text-align:center;}
+.hidden{display:none;text-align:center;}

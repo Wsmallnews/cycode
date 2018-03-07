@@ -1,0 +1,136 @@
+.prove-list{ 
+  background: #fff; 
+  border-top: 1px solid #e6e6e6;
+  }
+.prove-tr{
+  line-height: 50rpx;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.prove-tr text.prove-zd{
+  font-size: 28rpx;
+  width: 160rpx;
+  display: inline-block;
+}
+.prove-tr .car-city{
+  border: 1px solid #ccc;
+  padding: 6rpx 16rpx;
+  line-height: 30rpx;
+  border-radius: 8rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.car-pcordtext{
+  font-size: 28rpx;
+  color: #333;
+  vertical-align: middle;
+  width: 220rpx;
+  display: inline-block;
+}
+.prove-tr .car-city text{
+  font-size: 28rpx;
+  vertical-align: middle;
+}
+.prove-tr .car-city image{
+  width: 22rpx;
+  height: 12rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.triangle-right{
+  width: 12rpx;
+  height: 22rpx;
+  position: absolute;
+  right: 20rpx;
+  top:50%;
+  margin-top: -11rpx;
+}
+.prove-info{
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 30rpx;
+}
+.prove-tr:last-child{
+  border-bottom: none;
+}
+/* 行驶证 */
+.prove-ptbox{
+  padding:30rpx 20rpx;
+  background: #fff;
+}
+.prove-pttit text{
+  display: block;
+}
+.prove-title{
+  font-size: 30rpx;
+  color: #333; 
+}
+.prove-smtitle{
+  font-size: 26rpx;
+  color: #808080;
+  margin-top: 10rpx;
+}
+.prove-certificates{
+  width: 100%;
+  margin-top: 34rpx;
+}
+.certificates{
+  width:50%;
+  text-align: center;
+  display: inline-block;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+
+}
+.certificatesz{
+  width: 100%;
+  height: 242rpx;
+}
+.certificatesz image.xy-pic{
+  border: 2px dashed #cccccc;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.certificatesjz{
+  width: 100%;
+}
+.certificatesjz image.xy-pic{
+  border: 2px dashed #cccccc;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.car-number-box{
+   background: #fff;
+}
+.car-numss{
+  display: inline-block;
+  font-size: 28rpx !important;
+  padding: 10rpx 15rpx 10rpx 15rpx;
+  width:10%;
+  box-sizing: border-box;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  color: #333;
+}
+.car-numss:nth-of-type(10n){
+  border-right: 0;
+}
+.car-numss:nth-of-type(11n){
+  border-left: 0;
+}
+.car-numss action-sheet-item{
+  padding: 0;
+  border: 0 !important;
+}
+.car-numss action-sheet-item::before{
+  border: 0;
+}

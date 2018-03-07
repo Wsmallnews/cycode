@@ -1,0 +1,39 @@
+<view class='container'>
+  <view class='modify-list'>
+    <view class='modify-tr' bindtap="setPhotoInfo">
+      <text class='modify-zd fl' style='line-height:100rpx;'>头像</text>
+      <image class='modify-headpic fr' src="{{imgUrl}}" mode="aspectFill" wx:if="{{imgUrl!=null}}"></image>
+      <image wx:else class="modify-headpic fr" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+      <image src='../../images/triangle-right.png' class='triangle-right' ></image>
+    </view>
+    <view class='modify-tr' bindtap="setNickName">
+      <text class='modify-zd fl'>昵称</text>
+      <text class='modify-info fr'>{{userInfo.nickName}}</text>
+      <image src='../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='modify-tr' bindtap="actionSheetTap">
+      <text class='modify-zd fl'>性别</text>
+      <text class='modify-info fr'>{{menu}}</text>
+      <image src='../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='modify-tr' bindtap="setAutograph">
+      <text class='modify-zd fl'>个性签名</text>
+      <text class='modify-info fr'>我就是我，颜色不一样的花火</text>
+      <image src='../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='modify-tr'>
+      <text class='modify-zd fl'>手机号</text>
+      <text class='modify-info fr'>158***0263</text>
+    </view>
+  </view>
+  <view class='sumbit-box'>
+    <button class='sumbit-btn'>提交</button>
+  </view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+      <block wx:for-items="{{actionSheetItems}}">
+          <view class='car-numss'><action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item></view>
+      </block>
+      <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+  </action-sheet>

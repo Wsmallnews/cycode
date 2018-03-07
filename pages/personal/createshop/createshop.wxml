@@ -1,0 +1,68 @@
+<view class='container'>
+  <view class='create-table'>
+    <view class='create-tr'>
+      <text>店铺名称</text>
+      <input type='text' placeholder='输入店铺名称' maxlength='14'></input>
+    </view>
+    <view class='create-tr'>
+      <text>姓名</text>
+      <input type='text' placeholder='输入您的真实姓名' maxlength='6'></input>
+    </view>
+    <view class='create-tr'>
+      <text>店铺类别</text>
+      <text style='width:100%;'>加油</text>
+      <image src='../../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='create-tr'>
+      <text>手机号</text>
+      <input type='text' placeholder='请输入您的手机号码' maxlength='11'></input>
+    </view>
+    <view class='create-tr'>
+      <text>身份证</text>
+      <input type="idcard" placeholder='输入您的身份证号'></input>
+    </view>
+  </view>
+  <view class='create-tableb mart10'>
+    <view class='create-tr'>
+      <text>提现账号</text>
+      <input type='text' placeholder='输入与营业执照一致的公户或个户'></input>
+    </view>
+    <view class='create-tr'>
+      <text>开户行</text>
+      <input type='text' placeholder='输入您的开户行' ></input>
+    </view>
+  </view>
+  <!-- 身份证 -->
+  <view class='sfcard-box'>
+    <view class='sfcard-contentbox'>
+      <view class='sfcard'>
+        <view class='upsfcard'>
+              <image src="{{tempFilePaths }}" style="width: 100%; height: 210rpx;" mode="aspectFill" bindtap="chooseimage" class='xy-pic'></image>
+        </view>
+
+        <view class='sfcard-text'>身份证正面</view>
+      </view>
+      <view class='sfcard'>
+        <view class='upsfcard'>
+              <image src="{{tempFilePaths2 }}" style="width: 100%; height: 210rpx;" mode="aspectFill" bindtap="chooseimage2" class='xy-pic'></image>
+        </view>
+        <view class='sfcard-text'>身份证反面</view>
+      </view>
+    </view>
+    <view class='sfcard-contentbox'>
+      <view class='license-box'>
+        <view class='uplicense'>
+              <image src="{{tempFilePaths3}}" style="width: 100%; height: 290rpx;" mode="aspectFill" bindtap="chooseimage3" class='xy-pic'></image>
+        </view>
+
+        <view class='sfcard-text'>上传营业执照</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 提交 -->
+<view class='sumbit-box'>
+  <button class='sumbit-btn' bindtap="listenerButton">提交审核
+  </button>
+</view>
+</view>

@@ -1,0 +1,41 @@
+.comment-shop{
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.comment-shop-tit{
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20rpx;
+  overflow: hidden;
+}
+.comment-shop-tit:first-child{
+  border-top: 1px solid #e6e6e6;
+}
+.comment-iconname{
+  width: 80%;
+  vertical-align: middle;
+}
+.comment-shop-icon{
+  width: 30rpx;
+  height: 28rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.comment-shop-name{
+  font-size: 26rpx;
+  color: #333;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  width: 70%;
+  overflow: hidden;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: inline-block;
+}
+.collect-shop-triangle{
+  width: 12rpx;
+  height: 22rpx;
+  margin-top: 20rpx;
+  vertical-align: middle;
+}
