@@ -161,7 +161,48 @@
 <import src="/zanui/toast/index.wxml" />
 <template is="zan-toast" data="{{ zanToast }}"></template>
 
-<component-tag-name>
-    <view slot="one">这里是插入到组件slot中的内容 one</view>
-    <view slot="two">这里是插入到组件slot中的内容 two</view>
-</component-tag-name>
+
+
+<view class="section">
+    <view class="section__title">这是下面列表搜索框</view>
+    <input bindinput="" value="{{ listConf.searchParams.keyword }}" confirm-type="search" bindconfirm="searchList" placeholder="输入同步到view中"/>
+    <!-- <button bindtap="searchList">搜索</button> -->
+</view>
+
+
+<my-list id="myList" name="merchs" list-conf="{{ listConf }}" bind:requestFinish="requestFinish">
+    <view slot="list">
+        <view wx:for="{{ listConf.item }}" wx:key="item.id" class="zan-card" style="margin-bottom: 100rpx; margin-top: 100rpx">
+            <!-- 卡片左侧商品图片 -->
+            <view class="zan-card__thumb">
+                <image class="zan-card__img"
+                    src="{{ item.logo }}"
+                    mode="aspectFit"
+                ></image>
+            </view>
+            <!-- 卡片右侧详情描述 -->
+            <view class="zan-card__detail">
+                <!-- 商品标题行 -->
+                <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+                <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+                <view class="zan-card__detail-row">
+                    <view class="zan-card__right-col">{{ item.discount }}</view>
+                    <view class="zan-card__left-col zan-ellipsis--l2">
+                        {{ item.name }}
+                    </view>
+                </view>
+                <!-- 商品附属信息展示行 -->
+                <view class="zan-card__detail-row zan-c-gray-darker">
+                    <view class="zan-card__right-col">{{ item.distance }}</view>
+                    <view class="zan-card__left-col">
+                        {{ item.view_num }}
+                    </view>
+                </view>
+                <!-- 商品操作按钮相关 -->
+                <view class="zan-card__detail-row zan-c-gray-darker">
+                    <view class="zan-card__left-col zan-c-red">已发货</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</my-list>

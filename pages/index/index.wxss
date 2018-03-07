@@ -392,7 +392,7 @@
 .cyhelper-box text:nth-child(2){
     padding-bottom:20rpx;
 }
-.cyhelper-box>view>text{
+.cyhelper-box  view  text{
     padding: 0;
 }
 .cyhelper-box:nth-child(2){
