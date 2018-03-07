@@ -70,33 +70,43 @@
     </view>
     <view class='personal-icon-box col4'>
       <view class='personal-order-nav'>
-        <image src='../images/personal-bicon1.png'></image>
-        <text>车主卡</text>
-      </view>
-      <view class='personal-order-nav' bindtap="onTapcollect">
-        <image src='../images/personal-bicon2.png'></image>
-        <text>我的收藏</text>
-      </view>
-      <view class='personal-order-nav' bindtap="onTapcomment">
-        <image src='../images/personal-bicon3.png'></image>
-        <text>我的评论</text>
-      </view>
-      <view class='personal-order-nav' bindtap="onTapprove">
+        <navigator url="/pages/personal/wallet/wallet" hover-class="navigator-hover">
+            <image src='../images/personal-bicon1.png'></image>
+            <text>车主卡</text>
+        </navigator>
+    </view>
+    <view class='personal-order-nav' bindtap="onTapprove">
         <image src='../images/personal-bicon4.png'></image>
         <text>车主认证</text>
-      </view>
-      <view class='personal-order-nav' bindtap="onTapgrade">
-        <image src='../images/personal-bicon5.png'></image>
-        <text>会员等级</text>
-      </view>
-      <view class='personal-order-nav' bindtap="onTaptrade">
-        <image src='../images/personal-bicon6.png'></image>
-        <text>交易记录</text>
-      </view>
-      <view class='personal-order-nav' bindtap="onTapteam">
+    </view>
+    <view class='personal-order-nav' bindtap="onTapteam">
+        <image src='../images/personal-bicon7.png'></image>
+        <text>我的卡券</text>
+    </view>
+    <view class='personal-order-nav' bindtap="onTapteam">
         <image src='../images/personal-bicon7.png'></image>
         <text>我的团队</text>
-      </view>
+    </view>
+    <view class='personal-order-nav' bindtap="onTaptrade">
+        <image src='../images/personal-bicon6.png'></image>
+        <text>交易记录</text>
+    </view>
+    <view class='personal-order-nav' bindtap="onTapcollect">
+        <image src='../images/personal-bicon2.png'></image>
+        <text>我的收藏</text>
+    </view>
+    <view class='personal-order-nav' bindtap="onTapgrade">
+        <image src='../images/personal-bicon5.png'></image>
+        <text>收货地址</text>
+    </view>
+    <view class='personal-order-nav' bindtap="onTapcomment">
+        <image src='../images/personal-bicon3.png'></image>
+        <text>我的评论</text>
+    </view>
+      
+      
+      
+      
       <!-- <view class='personal-order-nav'>
         <image src='../images/personal-bicon8.png'></image>
         <text>我的关注</text>
