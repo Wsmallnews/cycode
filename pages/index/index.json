@@ -1,6 +1,8 @@
- {
-  "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#6994e2",
-  "navigationBarTitleText": "车语钱包",
-  "navigationBarTextStyle": "white"
+{
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "车语钱包",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "my-footer": "/pages/includes/footer/footer"
+    }
 }

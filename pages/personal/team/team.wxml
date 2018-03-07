@@ -1,0 +1,42 @@
+<view class="container">
+  <view class='team-top'>
+    <text class='fl'>成员信息</text>
+    <text class='fr text-r'>TA的佣金/会员</text>
+  </view>
+  <view class='team-list'>
+    <view class='team-list-box'>
+      <image src='../../../images/shop-pic.jpg' class='team-headpic fl'></image>
+      <view class='team-name-rz fl'>
+        <view class='team-name-grade'>
+          <text class='team-name'>刘馍馍</text>
+          <image src='../../../images/personal-grade.png' class='team-grade'></image>
+        </view>
+        <view class='car-recognize'>
+          <text>车主认证：福特福克斯 2012款</text>
+        </view>
+      </view>
+      <view class='team-member fr'>
+        <view>+138.6</view>
+        <view><text class='blue'>6</text>个成员</view>
+      </view>
+    </view>
+  </view>
+  <view class='team-list'>
+    <view class='team-list-box'>
+      <image src='../../../images/shop-pic.jpg' class='team-headpic fl'></image>
+      <view class='team-name-rz fl'>
+        <view class='team-name-grade'>
+          <text class='team-name'>刘馍馍</text>
+          <image src='../../../images/personal-grade.png' class='team-grade'></image>
+        </view>
+        <view class='car-recognize'>
+          <text>车主认证：福特福克斯 2012款</text>
+        </view>
+      </view>
+      <view class='team-member fr'>
+        <view>+138.6</view>
+        <view><text class='blue'>6</text>个成员</view>
+      </view>
+    </view>
+  </view>
+</view>

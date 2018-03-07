@@ -1,0 +1,76 @@
+.team-top{
+  padding: 20rpx;
+  border: 1px solid #e6e6e6;
+  border-left:0;
+  border-right: 0; 
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.team-top text{
+  display: inline-block;
+  color: #4d4d4d;
+  width: 50%;
+}
+
+.team-list{
+  background: #fff;
+  padding: 0 20rpx;
+}
+.team-list-box{
+  padding: 30rpx 0;
+  overflow: hidden;
+  border-bottom:1px solid #e6e6e6; 
+}
+.team-list-box:last-child{
+  border-bottom: none;
+}
+.team-headpic{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+  vertical-align: middle;
+}
+.team-name-rz{
+  width: 55%;
+  overflow: hidden;
+}
+.team-name{
+  color: #333;
+  margin-right: 15rpx;
+}
+.team-grade{
+  width: 75rpx;
+  height: 28rpx;
+  margin-top: 5rpx;
+}
+.team-name-grade{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+.car-recognize text{
+  font-size: 24rpx;
+  color: #b4b4b4;
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  width: 100%;
+}
+.team-member{
+  width: 24%;
+  vertical-align: middle;
+}
+.team-member view{
+  display: block;
+  text-align: right;
+  font-size: 24rpx;
+  color: #333;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}

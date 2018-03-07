@@ -1,0 +1,14 @@
+<import src="../../publicitem/publicitem.wxml" />
+<view class="container">
+<view class='comment-shop'>
+    <view class='comment-shop-tit'>
+      <view class='fl comment-iconname'>
+        <image src='../../../images/shop-iconp.png' class='comment-shop-icon'></image>
+        <text class='comment-shop-name'>车管家汽车美容</text>
+      </view>
+      <image src='../../../images/triangle-right.png' class='collect-shop-triangle fr'></image>
+    </view>
+    <template is="evaluateItem" data="{{...item}}"/>
+  </view>
+  
+</view>

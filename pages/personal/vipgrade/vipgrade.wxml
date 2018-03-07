@@ -1,0 +1,155 @@
+<view class="container">
+<!-- 会员头部 -->
+  <view class='vip-head'>
+    <view class='fl vip-headnum'>
+      <text>会员积分</text>
+      <text class='font32'>600</text>
+    </view>
+    <view class='fr vip-headnum'>
+      <text>会员积分</text>
+      <text class='font32'>600</text>
+    </view>
+    <view class='vip-head-pname'>
+      <image src='../../../images/shop-detailpic.jpg' class='vip-head-pic' mode="aspectFill"></image>
+      <view class='vip-name-grade'>
+        <text>刘禹锡</text>
+        <image src='../../../images/personal-grade.png'></image>
+      </view>
+    </view>
+  </view>
+<!-- 积分规则 -->
+  <view class='integral-rule'>
+    <text class='rule-detail'>详细积分规则></text>
+    <view class='rule-grade'>
+      <view class='grade-column'>
+        <view class='k-block240'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic none'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>50</text></view>
+        <view class='grade-zx h30 red'>
+        </view>
+        <view class='grade-headnum'><text>VIP1</text></view>
+      </view>
+      <view class='grade-column'>
+        <view class='k-block205'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic none'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>100</text></view>
+        <view class='grade-zx h65 red'>
+        </view>
+        <view class='grade-headnum'><text>VIP2</text></view>
+      </view>
+      <view class='grade-column'>
+        <view class='k-block162'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic none'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>200</text></view>
+        <view class='grade-zx h108 red'>
+        </view>
+        <view class='grade-headnum'><text>VIP3</text></view>
+      </view>
+      <view class='grade-column'>
+        <view class='k-block125'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>500</text></view>
+        <view class='grade-zx h145 red'>
+        </view>
+        <view class='grade-headnum'><text>VIP4</text></view>
+      </view>
+      <view class='grade-column'>
+        <view class='k-block80'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic none'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>1000</text></view>
+        <view class='grade-zx h190'>
+        </view>
+        <view class='grade-headnum'><text>VIP5</text></view>
+      </view>
+      <view class='grade-column'>
+        <view class='k-block40'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic none'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>2000</text></view>
+        <view class='grade-zx h230'>
+        </view>
+        <view class='grade-headnum'><text>VIP6</text></view>
+      </view>
+      <view class='grade-column'>
+        <view class='k-block0'></view>
+        <view class='grade-box'>
+          <view class='grade-headpic none'>
+            <image src='../../../images/rank.png' class='rank-bg'></image>
+            <image src='../../../images/shop-detailpic.jpg' class='rank-pic'></image>
+          </view>
+        </view>
+        <view class='grade-headnum'><text>5000</text></view>
+        <view class='grade-zx h268'>
+        </view>
+        <view class='grade-headnum'><text>VIP7</text></view>
+      </view>
+    </view>
+  </view>
+<!-- 特权 -->
+  <view class='mart20 privilege'>
+    <view class='privilege-tit'>
+      <text>我的特权</text>
+    </view>
+    <view class='privilege-list-box'>
+      <view class='privilege-box'>
+        <image src='../../../images/privilege-icon1.png'></image>
+        <text>车主认证</text>
+        <text class='font22'>添加修改爱车</text>
+      </view>
+      <view class='privilege-box'>
+        <image src='../../../images/privilege-icon2.png'></image>
+        <text>积分返现</text>
+        <text class='font22'>累计积分获得奖励</text>
+      </view>
+      <view class='privilege-box'>
+        <image src='../../../images/privilege-icon3.png'></image>
+        <text>身份标识</text>
+        <text class='font22'>会员等级图标</text>
+      </view>
+      <view class='privilege-box'>
+        <image src='../../../images/privilege-icon4.png'></image>
+        <text>推荐特权</text>
+        <text class='font22'>推荐新用户有奖励</text>
+      </view>
+      <view class='privilege-box'>
+        <image src='../../../images/privilege-icon5.png'></image>
+        <text>升级奖励</text>
+        <text class='font22'>升级即获奖励</text>
+      </view>
+      <view class='privilege-box'>
+        <image src='../../../images/privilege-icon6.png'></image>
+        <text>更多特权</text>
+        <text class='font22'>更多特权即将到来</text>
+      </view>
+    </view>
+  </view>
+</view>

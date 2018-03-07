@@ -1,0 +1,19 @@
+.input-box{
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-left: 0;
+  border-right: 0;
+}
+.input-box input{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.explain-text{
+  padding: 20rpx;
+  color: #666;
+  font-size: 22rpx;
+}

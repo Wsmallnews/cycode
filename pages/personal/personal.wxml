@@ -1,2 +1,137 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class='container'>
+<!-- 个人中心背景 -->
+  <view class='personal-bg'>
+    <image src='../images/setup-icon.png' class='personal-setupicon'></image>
+    <view class='personal-box'>
+      <image src='../images/test/personal-head.png' class='personal-head' mode="aspectFill"></image>
+      <view class='personal-text'>
+        <view class='bigtext'>刘宇汐 <image src='../images/test/personal-grade.png' class='personal-grade'></image></view>
+        <view>个性签名：我就是我，不一样的烟火</view>
+      </view>
+    </view>
+  </view>
+  <!-- 余额积分 -->
+  <view class='personal-yejf'>
+    <view class='fl personal-yejfnum'>
+      <text class='big-text'>2880.00</text>
+      <text>车主币</text>
+    </view>
+    <view class='fl personal-yejfnum'>
+      <text class='big-text'>1200</text>
+      <text>消费积分</text>
+    </view>
+    <view class='fr personal-yejfnum'>
+      <text class='big-text'>1200</text>
+      <text>数字资产</text>
+    </view>
+  </view>
+  <!-- 我的订单 -->
+   <view class='personal-icon-list'>
+    <view class='personal-list-tit'>
+      <view class='fl'>
+        <image src='../images/personal-ordericon.png' class='personal-ordericon'></image>
+        <text class='personal-titname'>我的订单</text>
+      </view>
+      <view class='fr'>
+        <text class='personal-allorder'>查看全部订单</text>
+        <image src='../images/triangle-right.png' class='triangle-right'></image>
+      </view>
+    </view>
+    <view class='personal-icon-box col5'>
+      <view class='personal-order-nav'>
+        <image src='../images/personal-aicon1.png'></image>
+        <text>待付款</text>
+      </view>
+      <view class='personal-order-nav'>
+        <image src='../images/personal-aicon2.png'></image>
+        <text>待发货</text>
+      </view>
+      <view class='personal-order-nav'>
+        <image src='../images/personal-aicon3.png'></image>
+        <text>待收货</text>
+      </view>
+      <view class='personal-order-nav'>
+        <image src='../images/personal-aicon4.png'></image>
+        <text>待评价</text>
+      </view>
+      <view class='personal-order-nav'>
+        <image src='../images/personal-aicon5.png'></image>
+        <text>售后</text>
+      </view>
+    </view>
+  </view> 
+  <!-- 个人服务 -->
+  <view class='mart20 personal-icon-list'>
+    <view class='personal-list-tit'>
+      <view class='fl'>
+        <image src='../images/personal-serviceicon.png' class='personal-ordericon'></image>
+        <text class='personal-titname'>个人服务</text>
+      </view>
+    </view>
+    <view class='personal-icon-box col4'>
+      <view class='personal-order-nav'>
+        <image src='../images/personal-bicon1.png'></image>
+        <text>车主卡</text>
+      </view>
+      <view class='personal-order-nav' bindtap="onTapcollect">
+        <image src='../images/personal-bicon2.png'></image>
+        <text>我的收藏</text>
+      </view>
+      <view class='personal-order-nav' bindtap="onTapcomment">
+        <image src='../images/personal-bicon3.png'></image>
+        <text>我的评论</text>
+      </view>
+      <view class='personal-order-nav' bindtap="onTapprove">
+        <image src='../images/personal-bicon4.png'></image>
+        <text>车主认证</text>
+      </view>
+      <view class='personal-order-nav' bindtap="onTapgrade">
+        <image src='../images/personal-bicon5.png'></image>
+        <text>会员等级</text>
+      </view>
+      <view class='personal-order-nav' bindtap="onTaptrade">
+        <image src='../images/personal-bicon6.png'></image>
+        <text>交易记录</text>
+      </view>
+      <view class='personal-order-nav' bindtap="onTapteam">
+        <image src='../images/personal-bicon7.png'></image>
+        <text>我的团队</text>
+      </view>
+      <!-- <view class='personal-order-nav'>
+        <image src='../images/personal-bicon8.png'></image>
+        <text>我的关注</text>
+      </view> -->
+    </view>
+  </view>
+  <!-- 常用工具 -->
+  <view class='mart20 personal-icon-list'>
+    <view class='personal-list-tit'>
+      <view class='fl'>
+        <image src='../images/personal-toolicon.png' class='personal-ordericon'></image>
+        <text class='personal-titname'>常用工具</text>
+      </view>
+    </view>
+    <view class='personal-icon-box col4'>
+      <view class='personal-order-nav' bindtap="onTapmodify">
+        <image src='../images/personal-cicon1.png'></image>
+        <text>修改资料</text>
+      </view>
+      <!-- <view class='personal-order-nav'>
+        <image src='../images/personal-cicon2.png'></image>
+        <text>成为推广员</text>
+      </view> -->
+      <view class='personal-order-nav' bindtap="onTapaccountsaft">
+        <image src='../images/personal-cicon3.png'></image>
+        <text>账号安全</text>
+      </view>
+      <!-- <view class='personal-order-nav'>
+        <image src='../images/personal-cicon4.png'></image>
+        <text>收货地址</text>
+      </view> -->
+      <view class='personal-order-nav' bindtap="onTapcreateshop">
+        <image src='../images/personal-cicon5.png'></image>
+        <text>成为商家</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class='container'>
+  <view class='input-box'>
+    <input type='text' placeholder="填写昵称" maxlength='14' auto-focus/>
+  </view>
+  <text class='explain-text'>昵称非真实姓名，用于发现评论等场景里使用</text>
+  <view class='sumbit-box'>
+    <button class='sumbit-btn'>保存</button>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='account-logo'>
+    <image src='../../../images/account-logo.png' class='logo-pic'></image>
+  </view>
+  <view class='password-box'>
+    <view class='password-list'>
+      <text>旧密码</text>
+      <input type='text' class='password-text' placeholder="请输入旧密码"></input>
+    </view>
+    <view class='password-list'>
+      <text>新密码</text>
+      <input type='text' class='password-text' placeholder="请输入新密码"></input>
+    </view>
+    <view class='password-list'>
+      <text>确认密码</text>
+      <input type='text' class='password-text' placeholder="再次输入新密码"></input>
+    </view>
+  </view>
+
+  <view class='sumbit-box'>
+    <button class='sumbit-btn'>确定</button>
+  </view>
+</view>

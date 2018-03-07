@@ -1,0 +1,95 @@
+<view class="container">
+  <view class='prove-list'>
+    <view class='prove-tr'>
+      <text class='prove-zd fl'>车牌号</text>
+      <view class='fl car-city' bindtap="actionSheetTap">
+        <text>{{menu}}</text> <image src='../../../images/striangle-down.png'></image>
+      </view>
+      <input type='text' class='fl car-pcordtext' placeholder='输入车牌号' placeholder-style='#b9b9b9'></input>
+    </view>
+    <view class='prove-tr'>
+      <text class='prove-zd fl'>车辆品牌</text>
+      <text class='prove-info fr'>奥迪</text>
+      <image src='../../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='prove-tr'>
+      <text class='prove-zd fl'>车辆型号</text>
+      <text class='prove-info fr'>Q5</text>
+      <image src='../../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='prove-tr'>
+      <text class='prove-zd fl'>年款</text>
+      <text class='prove-info fr'>2016款 自动 豪华型PLUS</text>
+      <image src='../../../images/triangle-right.png' class='triangle-right'></image>
+    </view>
+    <view class='prove-tr'>
+      <text class='prove-zd fl'>发动机排量</text>
+      <text class='prove-info fr'>2.0T</text>
+    </view>
+    <view class='prove-tr'>
+      <text class='prove-zd fl'>手机号</text>
+      <text class='prove-info fr'>15893070263</text>
+    </view>
+  </view>
+<!-- 行驶证 -->
+  <view class='prove-ptbox mart20'>
+    <view class='prove-pttit'>
+      <text class='prove-title'>上传行驶证正反面</text>
+      <text class='prove-smtitle'>需要证件正反面全部信息清晰无遮拦</text>
+      <view class='prove-certificates'>
+        <view class='certificates'>
+          <view class='certificatesz'>
+            <image src="{{tempFilePaths }}" style="width: 100%; height: 242rpx;" mode="aspectFill" bindtap="chooseimage" class='xy-pic'></image>
+          </view>
+        </view>
+        <view class='certificates'>
+          <view class='certificatesz'>
+            <image src="{{tempFilePaths2 }}" style="width: 100%; height: 242rpx;" mode="aspectFill" bindtap="chooseimage2" class='xy-pic'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 驾驶证 -->
+  <view class='prove-ptbox mart20'>
+    <view class='prove-pttit'>
+      <text class='prove-title'>上传驾驶证正面</text>
+      <text class='prove-smtitle'>需要手持证件五官、信息清楚可见，无遮拦</text>
+      <view class='prove-certificates'>
+        <view class='certificatesjz'>
+          <image src="{{tempFilePaths3 }}" style="width: 100%; height: 426rpx;" mode="aspectFill" bindtap="chooseimage3" class='xy-pic'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 车辆照片 -->
+  <view class='prove-ptbox mart20'>
+    <view class='prove-pttit'>
+      <text class='prove-title'>上传车辆照片</text>
+      <text class='prove-smtitle'>上传车辆照片车牌号需与认证车牌号保持一致</text>
+      <view class='prove-certificates'>
+        <view class='certificatesjz'>
+          <image src="{{tempFilePaths4 }}" style="width: 100%; height: 426rpx;" mode="aspectFill" bindtap="chooseimage4" class='xy-pic'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 提交 -->
+<view class='sumbit-box'>
+  <button class='sumbit-btn' bindtap="listenerButton">提交认证
+  </button>
+  <toast hidden="{{hiddenToast}}" duration="3000" bindchange="toastHidden" >OK!</toast>
+</view>
+</view>
+
+
+
+
+<view class='car-number-box'>
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+      <block wx:for-items="{{actionSheetItems}}">
+          <view class='car-numss'><action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item></view>
+      </block>
+      <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+  </action-sheet>
+</view>

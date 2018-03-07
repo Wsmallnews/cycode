@@ -1,66 +1,59 @@
-// pages/personal/personal.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
   
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+    /**
+     * 页面的初始数据
+     */
+    data: {
+      
+    },
   
-  },
+    /**
+     * 生命周期函数--监听页面加载
+     */
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
-})
+      onTapcollect: function (event) {
+        wx.navigateTo({
+          url: "../personal/collect/collect"
+        });
+      },
+      onTapcomment: function (event) {
+        wx.navigateTo({
+          url: "../personal/comment/comment"
+        });
+      },
+      onTapprove: function (event) {
+        wx.navigateTo({
+          url: "../personal/prove/prove"
+        });
+      },
+      onTaptrade: function (event) {
+        wx.navigateTo({
+          url: "../personal/trade/trade"
+        });
+      },
+      onTapteam: function (event) {
+        wx.navigateTo({
+          url: "../personal/team/team"
+        });
+      },
+      onTapgrade: function (event) {
+        wx.navigateTo({
+          url: "../personal/vipgrade/vipgrade"
+        });
+      },
+      onTapmodify: function (event) {
+        wx.navigateTo({
+          url: "../personal/modify/modify"
+        });
+      },
+      onTapcreateshop: function (event) {
+        wx.navigateTo({
+          url: "../personal/createshop/createshop"
+        });
+      },
+      onTapaccountsaft: function (event) {
+        wx.navigateTo({
+          url: "../personal/accountsaft/accountsaft"
+        });
+      },
+  })

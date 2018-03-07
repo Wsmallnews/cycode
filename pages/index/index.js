@@ -47,7 +47,7 @@ Page({
   },
   onshopdetail: function(event){
     wx.navigateTo({
-      url: "../shopdetails/shopdetails"
+        url: "../nearby/merch/merch"
     })
   },
   ontapindexmore: function (event) {

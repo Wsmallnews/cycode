@@ -1,0 +1,50 @@
+<view class="container">
+  <view class='trade-tab'>
+    <text class="{{selected?'blue':'default'}}" bindtap="selected">钱包记录</text>
+    <text class="{{selected1?'blue':'default'}}" bindtap="selected1">提现记录</text>
+  </view>
+  <view class="{{selected?'show':'hidden'}}">
+      <view class='trade-list'>
+        <view class='fl trade-info'>
+          <text class='font28'>快捷汽车美容保养中心</text>
+          <text class='gary'>微信支付</text>
+          <text class='gary'>10:20</text>
+        </view>
+        <view class='fr trade-num'>
+        <text>-200</text>
+        </view>
+      </view>
+      <view class='trade-list'>
+        <view class='fl trade-info'>
+          <text class='font28'>快捷汽车美容保养中心</text>
+          <text class='gary'>微信支付</text>
+          <text class='gary'>10:20</text>
+        </view>
+        <view class='fr trade-num'>
+        <text>-200</text>
+        </view>
+      </view>
+  </view>
+  <view class="{{selected1?'show':'hidden'}}">
+      <view class='trade-list'>
+        <view class='fl trade-info'>
+          <text class='font28'>快捷汽车美容保养中心</text>
+          <text class='gary'>微信支付</text>
+          <text class='gary'>10:20</text>
+        </view>
+        <view class='fr trade-num'>
+        <text>-210</text>
+        </view>
+      </view>
+      <view class='trade-list'>
+        <view class='fl trade-info'>
+          <text class='font28'>快捷汽车美容保养中心</text>
+          <text class='gary'>微信支付</text>
+          <text class='gary'>10:20</text>
+        </view>
+        <view class='fr trade-num'>
+        <text>-200</text>
+        </view>
+      </view>
+  </view>
+</view>
