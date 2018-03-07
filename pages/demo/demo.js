@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const { Actionsheet, Noticebar, extend } = require('../../zanui/index');
-const Util = require('../../utils/util');
+// const { Actionsheet, Noticebar, Toast, extend } = require('../../zanui/index');
+const Util = require('../../libs/util');
 
 Page({
     data: {     // 页面的初始数据
@@ -30,7 +30,14 @@ Page({
         loadStaus: {
             loading: true
         },
-        merchs: []
+        merchs: [],
+        listConf: {
+            url: '/deskapi/merchs',
+            item: [],
+            searchParams: {
+                keyword: ''
+            }
+        }
     },
     onLoad: function (options) {       // 生命周期函数--监听页面加载
         // 一个页面只会调用一次，可以在 onLoad 中获取打开当前页面所调用的 query 参数。
@@ -68,9 +75,40 @@ Page({
     },
     onShow() {      // 生命周期函数--监听页面显示
         console.log('----onShow');
+        // this.showZanToast('success', 100000);
+        Util.toast({
+            title: '已完成'
+            // icon: 'success',
+            // duration: 3000
+        });
+        // wx.showActionSheet({
+        //     itemList: ['A', 'B', 'C'],
+        //     success: function(res) {
+        //         if (!res.cancel) {
+        //             console.log(res.tapIndex)
+        //         }
+        //     }
+        // });
+        console.log('----1122331');
     },
     onReady() {     // 生命周期函数--监听页面初次渲染完成
-        console.log('----onReady');
+        // console.log('----onReady');
+        this.myList = this.selectComponent("#myList");
+
+        // Util.setData({
+        //     key: 'test',
+        //     data: {abc: 123, def: 234},
+        //     success: function (res) {
+        //         console.log(res);
+        //     }
+        // }, true);
+        // var data = Util.getData({
+        //     key: 'test',
+        //     success: function (res) {
+        //         console.log(res);
+        //     }
+        // });
+        // console.log(data);
     },
     onHide() {      // 生命周期函数--监听页面隐藏
         console.log('----onHide');
@@ -79,11 +117,11 @@ Page({
         console.log('----onUnload');
     },
     onPullDownRefresh() {           // 页面相关事件处理函数--监听用户下拉动作
-        console.log('----I pull down');
+        // console.log('----I pull down');
         // wx.stopPullDownRefresh可以停止当前页面的下拉刷新
     },
     onReachBottom() {               // 页面上拉触底事件的处理函数
-        console.log('----到底了');
+        this.myList.nextStart();
     },
     onShareAppMessage() {           // 用户点击右上角转发
         console.log('----share');
@@ -94,7 +132,7 @@ Page({
         }
     },
     onPageScroll(options) {                // 页面滚动触发事件的处理函数 包含页面 scrollTop
-        console.log('----page scroll');
+        // console.log('----page scroll');
     },
     onTabItemTap() {                // 当前是 tab 页时，点击 tab 时触发
         console.log('----click tap');
@@ -110,14 +148,14 @@ Page({
     },
     getMerchs () {
         var _this = this;
-        console.log('request');
-        Util.ajax({
-            url: "/deskapi/merchs",
-            data: {page_size: 5},
-            success: function(result) {
-                _this.setData({merchs: result.result.data});
-            }
-        });
+        // console.log('request');
+        // Util.ajax({
+        //     url: "/deskapi/merchs",
+        //     data: {page_size: 5},
+        //     success: function(result) {
+        //         _this.setData({merchs: result.result.data});
+        //     }
+        // });
     },
     //事件处理函数
     bindViewTap: function() {
@@ -142,39 +180,22 @@ Page({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
+    },
+    requestFinish: function (e) {
+        this.setData({
+            'listConf.item': e.detail.item
+        });
+    },
+    searchList: function (e) {
+        this.setData({
+            'listConf.searchParams.keyword': e.detail.value
+        });
+
+        this.myList.listSearch();
+    },
+    bindKeyInput: function(e) {
+        // this.setData({
+        //     inputValue: e.detail.value
+        // })
     }
 })
-
-
-
-
-// Page(Object.assign({}, Noticebar, {
-//   data: {
-//     movable: {
-//       text: '足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。'
-//     },
-//     static1: {
-//       text: '足协杯战线连续第2年上演广州德比战'
-//     },
-//     static2: {
-//       text: '足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。'
-//     }
-//   },
-//   onShow() {
-//     // 滚动通告栏需要initScroll
-//     this.initZanNoticeBarScroll('noticebar');
-//     // initScroll的通告栏如果宽度足够显示内容将保持静止
-//     // this.initZanNoticeBarScroll('static1');
-//     // 不进行initScroll的通告栏也将保持静止
-//     // this.initZanNoticeBarScroll('static2');
-//   }
-// }))
-
-// Page(extend({}, Actionsheet, {
-//     data: {
-//         actionsheet: {
-//             show: true,
-//             actions: []
-//         }
-//     }
-// }));

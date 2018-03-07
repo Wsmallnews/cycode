@@ -38,7 +38,7 @@ const extend = (objFirst, objSecond, mergeArray) => {
                     objFirst[s] = objFirst[s].concat(objSecond[s]);     // 合并
                 }
             } else if (typeof objSecond[s] === 'object') {          // 如果是对象
-                objFirst[s] = util.extend(objFirst[s], objSecond[s], mergeArray);
+                objFirst[s] = extend(objFirst[s], objSecond[s], mergeArray);
             } else {                        // 直接赋值
                 objFirst[s] = objSecond[s];
             }
@@ -55,31 +55,131 @@ const isHttp = str => {
 }
 
 
-const setData = (name, value, cb) => {
-    // LocalForage.setItem(name, value, function(value){
-    //     if (typeof cb == "function") {
-    //         cb(value)
-    //     }
-    // });
+/*
+toast
+ */
+const toast = options => {
+    var default_options = {
+        title: "",
+        icon: "none",       // "success", "loading", "none"
+        image: "",      // 自定义图标的本地路径，image 的优先级高于 icon
+        duration: 3000, // 3秒
+        mask: false,
+        success: undefined,
+        fail: undefined,
+        complete: undefined
+    }
+
+    options = extend(default_options, options);
+    wx.showToast(options);
 }
-const getData = (name, cb) => {
-    // LocalForage.getItem(name, function (err, value) {
-    //     if (err == null) {
-    //         if (typeof cb == "function") {
-    //             cb(value)
-    //         }
-    //     } else {
-    //         alert('data_err');
-    //     }
-    // });
+
+const hideToast = () => {
+    wx.hideToast();
 }
-const removeData = (name, cb) => {
-    // LocalForage.removeItem(name, function () {
-    //     if (typeof cb == "function") {
-    //         cb(value)
-    //     }
-    // });
+
+const loading = options => {
+    var default_options = {
+        title: "",
+        mask: false,
+        success: undefined,
+        fail: undefined,
+        complete: undefined
+    }
+
+    options = extend(default_options, options);
+    wx.showLoading(options);
 }
+
+const hideLoading = () => {
+    wx.hideLoading();
+}
+
+/*
+options 设置参数
+sync 同步 默认异步
+success res: {errMsg: "setStorage:ok"}
+ */
+const setData = (options, sync) => {
+    sync == undefined ? false : true;
+
+    if (options == undefined) {
+        toast({title: "数据存储失败"});
+        return false;
+    }
+
+    if (sync) {
+        try {
+            wx.setStorageSync(options.key, options.data);
+        } catch (e) {
+            toast({title: "数据存储失败"});
+        }
+    } else {
+        wx.setStorage(options);
+    }
+}
+
+const getData = (options, sync) => {
+    sync == undefined ? false : true;
+
+    if (options == undefined) {
+        toast({title: "数据获取失败"});
+        return false;
+    }
+
+    if (sync) {
+        try {
+            var value = wx.getStorageSync(options.key)
+            if (value) {
+                return value;
+            }
+        } catch (e) {
+            toast({title: "数据获取失败"});
+        }
+    } else {        // res: {errMsg: "getStorage:ok", data: {}}
+        var success = options.success;
+        options.success = function (res) {
+            if (res.errMsg == 'getStorage:ok') {    // 数据获取成功
+                success(res.data);
+            } else {
+                toast({title: res.errMsg});
+            }
+        }
+        wx.getStorage(options);
+    }
+}
+const removeData = (options, sync) => {
+    sync == undefined ? false : true;
+
+    if (options == undefined) {
+        toast({title: "数据移除失败"});
+        return false;
+    }
+
+    if (sync) {
+        try {
+            wx.removeStorageSync(options.key)
+        } catch (e) {
+            toast({title: "数据移除失败"});
+        }
+    } else {
+        wx.removeStorage(options);
+    }
+}
+const clearData = (sync) => {
+    sync == undefined ? false : true;
+
+    if (sync) {
+        try {
+            wx.clearStorageSync()
+        } catch (e) {
+            toast({title: "数据清除失败"});
+        }
+    } else {
+        wx.clearStorage();
+    }
+}
+
 
 const baseUrl = "https://cyapi.smcdn.top";
 
@@ -104,14 +204,14 @@ const ajax = options => {
             if (success != undefined) {
                 success(res.data, res);     // 处理返回结果
             } else {
-                
+                toast({title: "处理成功"});
             }
         },
         fail: function (res) {
             if (error != undefined) {
                 error(res);
             } else {
-
+                toast({title: "处理失败"});
             }
         }
     }
@@ -129,10 +229,17 @@ const ajax = options => {
 
 
 
-
 module.exports = {
     formatTime: formatTime,
     baseUrl: baseUrl,
     ajax: ajax,
-    extend: extend
+    extend: extend,
+    toast: toast,
+    hideToast: hideToast,
+    loading: loading,
+    hideLoading: hideLoading,
+    setData: setData,
+    getData: getData,
+    removeData: removeData,
+    clearData: clearData
 }
