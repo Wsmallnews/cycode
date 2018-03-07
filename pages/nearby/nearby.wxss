@@ -72,3 +72,29 @@
     text-align: center;
     padding:0 0 16rpx 0;
 }
+/* 八个推荐分类 */
+.index-navbox{
+    width: 100%;
+    background: #fff;
+    flex-direction:row;
+    padding: 35rpx 35rpx 0 35rpx;
+    box-sizing:border-box;
+}
+.index-nav{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-bottom: 36rpx;
+}
+.index-navicon{
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    margin: 0 auto;
+}
+.index-navtext{
+    display: block;
+    font-size: 24rpx;
+    color: #333;
+    margin-top: 18rpx;
+}

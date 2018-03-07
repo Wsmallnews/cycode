@@ -3,6 +3,8 @@ Page(extend({}, Tab,{
   data: {
     showView: true,
     popdown:false,
+    choseRecommend:false,
+    recently:false,
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -15,7 +17,7 @@ Page(extend({}, Tab,{
     tab2: {
          color:'#eee',
          selectedId: 'all',
-        scroll:true,
+         scroll:true,
          list:[{
           // tab 项 id
           id: 'all',
@@ -77,8 +79,26 @@ Page(extend({}, Tab,{
   onChangeShowSta: function () {
     var that = this;
     that.setData({
-      popdown: (!that.data.popdown)
+      popdown: (!that.data.popdown),
+      choseRecommend:false,
+      recently:false,
     })
+  },
+  recommendChose(){
+      var _this = this;
+      _this.setData({
+          choseRecommend: !_this.data.choseRecommend,
+          popdown: false,
+          recently:false,
+      })
+  },
+  recentlyChose(){
+      var _this = this;
+      _this.setData({
+          recently: !_this.data.recently,
+          popdown: false,
+          choseRecommend:false,
+      })
   },
   onTap: function (event) {
     wx.navigateTo({
