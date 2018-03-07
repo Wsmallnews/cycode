@@ -134,4 +134,7 @@
       </view>
     </view>
   </view>
+    <view>
+        <my-footer></my-footer>
+    </view>
 </view>

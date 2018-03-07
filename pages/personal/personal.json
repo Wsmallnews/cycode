@@ -1,6 +1,9 @@
 {
-  "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#fff",
-  "navigationBarTitleText": "个人中心",
-  "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "个人中心",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "my-footer": "/pages/includes/footer/footer"
+    }
 }
