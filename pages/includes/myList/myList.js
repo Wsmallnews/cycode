@@ -29,6 +29,10 @@ Component({
             type: Boolean,
             value: false
         },
+        isRefresh: {
+            type: Boolean,
+            value: true
+        },
         showLoading: {
             type: Boolean,
             value: false
@@ -36,7 +40,7 @@ Component({
     },
     data: {     // 这里是一些组件内部数据
         loading: false,
-        pullUp: true,
+        pullUp: false,
         loadTip: "正在加载...",
         defaultListConf: {      // 默认配置参数
             url: "",
@@ -51,9 +55,7 @@ Component({
         current: 1,
         queryParams: {},
         onePage: false,
-        loadStaus: {
-            loading: true
-        },
+        loadStaus: { nomore: true },
     },
     methods: {  // 这里是一个自定义方法
         listInit: function (){
@@ -141,6 +143,11 @@ Component({
                         } else {
                             _this.noMore();
                         }
+                    } else {
+                        _this.setData({      // 开启分页，加载更多
+                            pullUp: true,
+                            loadStaus: { loading: true }
+                        });
                     }
                 }
             })
@@ -184,10 +191,14 @@ Component({
             _this.listLoad();
         },
         listReset () {
+            console.log('listReset');
             this.setData({
-                pullUp: true,
-                loadStaus: { loading: true }
+                'queryParams.page': 1,
+                'pullUp': true,
+                'loadStaus': { loading: true }
             });
+
+            this.listLoad();
         },
         noData () {
             this.setData({
@@ -204,9 +215,6 @@ Component({
         listSearch: function(){         // 搜索
             var _this = this;
 
-            _this.setData({
-                'queryParams.page': 1
-            });
             _this.listReset();
             _this.listLoad();
         },
@@ -241,18 +249,16 @@ Component({
                     var detail = {
                         item: data
                     }
+
                     _this.triggerEvent('requestFinish', detail);
                 }
             });
         }
-        setTimeout(function() {
-            console.log("start request-------------- 有 bug ---------------");
-            if (!_this.data.isHandStart) {
-                _this.listInit();
-            }
-        }, 20000)
+
+        if (!_this.data.isHandStart) {
+            _this.listInit();
+        }
     },
     ready() {    // 组件生命周期函数，在组件布局完成后执行，此时可以获取节点信息（使用 SelectorQuery ）
-
     }
 })
