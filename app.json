@@ -7,6 +7,16 @@
 
         "pages/personal/personal",
         "pages/personal/modify/modify",
+        "pages/personal/accountsaft/accountsaft",
+        "pages/personal/createshop/createshop",
+        "pages/personal/modify/inputtext/inputtext",
+        "pages/personal/vipgrade/vipgrade",
+        "pages/personal/team/team",
+        "pages/personal/trade/trade",
+        "pages/personal/prove/prove",
+        "pages/personal/collect/collect",
+        "pages/personal/wallet/wallet",
+
 
         "pages/demo/demo",
         "pages/nearby/nearby",

@@ -1,0 +1,12 @@
+<view class="wallet">
+    <view class="wallet-money">
+        <view class="fl">
+            <text>账户余额</text>
+            <text>99254651.00</text>
+        </view>
+        <view class="fr">
+            <text>可提现余额</text>
+            <text>99254651.00</text>
+        </view>
+    </view>
+</view>

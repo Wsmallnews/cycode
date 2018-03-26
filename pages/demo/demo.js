@@ -74,22 +74,6 @@ Page({
         console.log('----onLoad');
     },
     onShow() {      // 生命周期函数--监听页面显示
-        console.log('----onShow');
-        // this.showZanToast('success', 100000);
-        Util.toast({
-            title: '已完成'
-            // icon: 'success',
-            // duration: 3000
-        });
-        // wx.showActionSheet({
-        //     itemList: ['A', 'B', 'C'],
-        //     success: function(res) {
-        //         if (!res.cancel) {
-        //             console.log(res.tapIndex)
-        //         }
-        //     }
-        // });
-        console.log('----1122331');
     },
     onReady() {     // 生命周期函数--监听页面初次渲染完成
         // console.log('----onReady');
@@ -117,6 +101,8 @@ Page({
         console.log('----onUnload');
     },
     onPullDownRefresh() {           // 页面相关事件处理函数--监听用户下拉动作
+        this.pageRefresh();
+        // console.log(123);
         // console.log('----I pull down');
         // wx.stopPullDownRefresh可以停止当前页面的下拉刷新
     },
@@ -136,6 +122,9 @@ Page({
     },
     onTabItemTap() {                // 当前是 tab 页时，点击 tab 时触发
         console.log('----click tap');
+    },
+    pageRefresh() {
+        this.myList.listReset();
     },
     showPageMethods() {                     // 简单展示 部分 page 对象常用属性
         // Page.prototype.route
