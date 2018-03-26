@@ -106,8 +106,8 @@ Page(extend({}, Tab,{
     });
   },
   onshopdetail: function (event) {
-    wx.navigateTo({
-      url: "../shopdetails/shopdetails"
-    })
+      wx.navigateTo({
+          url: "../nearby/merch/merch"
+      })
   }
 }));
